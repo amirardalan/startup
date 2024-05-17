@@ -1,8 +1,8 @@
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-center font-mono text-lg lg:flex">
-        Startup
+    <main className="flex justify-center align-center h-screen">
+      <div className="font-mono text-gray-500 text-center text-3xl m-auto">
+        Startup()
       </div>
     </main>
   );
