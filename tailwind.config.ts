@@ -7,6 +7,9 @@ const config: Config = {
       colors: {
         primary: 'var(--color-primary)',
       },
+      gridTemplateRows: {
+        layout: 'auto 1fr auto',
+      },
     },
   },
   plugins: [],
