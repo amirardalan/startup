@@ -1,15 +1,15 @@
 import Nav from '@/app/ui/nav';
 
-export default function Home() {
+export default function About() {
   return (
     <>
       <Nav />
       <main>
         <div className="m-auto text-center">
           <div className="font-mono text-gray-400 text-center text-3xl">
-            Startup()
+            About Startup()
           </div>
-          <div className="text-gray-600">subtitle</div>
+          <div className="text-gray-600">about subtitle</div>
         </div>
       </main>
     </>

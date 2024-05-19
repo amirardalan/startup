@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { JetBrains_Mono } from 'next/font/google';
 import '@/app/globals.css';
 
+import Nav from '@/app/ui/nav';
+
 import DarkIcon from '@/public/images/favicon-dark.png';
 import LightIcon from '@/public/images/favicon-light.png';
 
@@ -34,7 +36,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="p-16 flex flex-col-reverse bg-black">
       <body className={mono.className}>{children}</body>
     </html>
   );
