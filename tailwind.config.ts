@@ -6,6 +6,7 @@ const config: Config = {
     extend: {
       colors: {
         primary: 'var(--color-primary)',
+        secondary: 'var(--color-secondary)',
       },
       gridTemplateRows: {
         layout: 'auto 1fr auto',

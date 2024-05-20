@@ -6,6 +6,7 @@
   --background-rgb: 0, 0, 0;
   --foreground-rgb: 255, 255, 255;
   --color-primary: #34dca4;
+  --color-secondary: #ff7e67;
 }
 
 @media (prefers-color-scheme: dark) {
