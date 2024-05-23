@@ -6,8 +6,6 @@ import Link from 'next/link';
 export default function Navigation() {
   const pathname = usePathname();
 
-  console.log(pathname);
-
   return (
     <nav className="flex justify-end bg-black text-white">
       <ul className="flex flex-row">
