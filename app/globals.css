@@ -3,21 +3,21 @@
 @tailwind utilities;
 
 :root {
-  --background-rgb: 0, 0, 0;
-  --foreground-rgb: 255, 255, 255;
+  --color-dark: 0, 0, 0;
+  --color-light: 255, 255, 255;
   --color-primary: #34dca4;
   --color-secondary: #ff7e67;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-rgb: 0, 0, 0;
+    --color-light: 255, 255, 255;
+    --color-dark: 0, 0, 0;
   }
 }
 
 body {
-  color: rgb(var(--background-rgb));
+  color: rgb(var(--color-dark));
 }
 
 @layer components {
