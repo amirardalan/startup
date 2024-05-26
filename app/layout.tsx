@@ -31,9 +31,6 @@ export const metadata: Metadata = {
   },
 };
 
-// This is a placeholder for the theme. We'll implement this later.
-const theme = 'dark';
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -42,7 +39,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${theme} h-screen grid grid-rows-layout bg-black`}
+      // className={`${theme} h-screen grid grid-rows-layout bg-black`}
     >
       <body className={mono.className}>
         <div className="p-16 flex flex-col min-h-screen">
