@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
-
-type Theme = 'light' | 'dark';
+import { useTheme } from '@/store/themeStore';
+import { Theme } from '@/types/theme';
 
 // Theme context for theme-specific non-CSS
 export const useThemeContext = (): [Theme, () => void] => {
-  const [theme, setTheme] = useState<Theme>('light');
+  const [theme, setTheme] = useState<Theme>(useTheme.getState().theme);
   const setMode = (mode: Theme) => {
     setTheme(mode);
   };

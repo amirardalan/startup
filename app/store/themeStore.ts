@@ -5,10 +5,8 @@ type Theme = {
   toggleTheme: () => void;
 };
 
-const useTheme = create<Theme>((set) => ({
+export const useTheme = create<Theme>((set) => ({
   theme: 'light',
   toggleTheme: () =>
     set((state) => ({ theme: state.theme === 'light' ? 'dark' : 'light' })),
 }));
-
-export default useTheme;
