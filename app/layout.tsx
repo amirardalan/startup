@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
+import { cookies } from 'next/headers';
 import { JetBrains_Mono } from 'next/font/google';
 import '@/app/globals.css';
 
-import { useThemeContext } from '@/hooks/useTheme';
+import Header from '@/ui/header';
 
 import Nav from '@/ui/nav';
 import Footer from '@/ui/footer';
@@ -38,8 +39,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const theme = useThemeContext()[0] === 'light' ? 'light' : 'dark';
-  console.log(theme);
+  const theme = cookies().get('x-theme')?.value === 'dark' ? 'dark' : 'light';
 
   return (
     <html
@@ -49,6 +49,7 @@ export default function RootLayout({
       <body className={mono.className}>
         <div className="p-16 flex flex-col min-h-screen">
           <Nav />
+          <Header />
           <div className="overflow-auto flex-grow">{children}</div>
           <Footer />
         </div>

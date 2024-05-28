@@ -13,7 +13,7 @@ const config: Config = {
       },
     },
   },
-  darkMode: 'selector',
+  darkMode: 'class',
   plugins: [],
 };
 
