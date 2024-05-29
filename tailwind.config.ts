@@ -5,6 +5,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        light: 'var(--color-light)',
+        dark: 'var(--color-dark)',
         primary: 'var(--color-primary)',
         secondary: 'var(--color-secondary)',
       },
@@ -13,7 +15,7 @@ const config: Config = {
       },
     },
   },
-  darkMode: 'class',
+  darkMode: 'selector',
   plugins: [],
 };
 

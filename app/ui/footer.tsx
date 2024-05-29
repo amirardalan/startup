@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="bg-black text-white text-center p-4">
+    <footer className="text-dark dark:text-light text-center p-4">
       &copy; {new Date().getFullYear()} Startup
     </footer>
   );

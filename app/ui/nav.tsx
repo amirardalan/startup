@@ -7,7 +7,7 @@ export default function Navigation() {
   const pathname = usePathname();
 
   return (
-    <nav className="flex justify-end bg-black text-white">
+    <nav className="flex justify-end bg-light text-dark dark:bg-dark dark:text-light">
       <ul className="flex flex-row">
         <li className="mr-6">
           <Link href="/" className={pathname === '/' ? 'text-primary' : ''}>

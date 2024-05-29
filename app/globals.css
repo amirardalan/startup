@@ -3,16 +3,16 @@
 @tailwind utilities;
 
 :root {
-  --color-dark: 0, 0, 0;
-  --color-light: 255, 255, 255;
+  --color-dark: rgb(0, 0, 0);
+  --color-light: rgb(255, 255, 255);
   --color-primary: #34dca4;
   --color-secondary: #ff7e67;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-light: 255, 255, 255;
-    --color-dark: 0, 0, 0;
+    --color-light: rgb(255, 255, 255);
+    --color-dark: rgb(0, 0, 0);
   }
 }
 
