@@ -1,3 +1,4 @@
+import Nav from '@/ui/nav';
 import dynamic from 'next/dynamic';
 import { cookies } from 'next/headers';
 const ThemeSelector = dynamic(() => import('@/components/ThemeSelector'), {
@@ -6,9 +7,10 @@ const ThemeSelector = dynamic(() => import('@/components/ThemeSelector'), {
 const Header = () => {
   const theme = cookies().get('x-theme')?.value;
   return (
-    <nav>
+    <div>
+      <Nav />
       <ThemeSelector theme={theme === 'dark' ? 'dark' : 'light'} />
-    </nav>
+    </div>
   );
 };
 export default Header;

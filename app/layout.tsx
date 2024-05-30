@@ -4,8 +4,6 @@ import { JetBrains_Mono } from 'next/font/google';
 import '@/app/globals.css';
 
 import Header from '@/ui/header';
-
-import Nav from '@/ui/nav';
 import Footer from '@/ui/footer';
 
 import DarkIcon from '@/public/images/favicon-dark.png';
@@ -48,7 +46,6 @@ export default function RootLayout({
     >
       <body className={mono.className}>
         <div className="p-16 flex flex-col min-h-screen">
-          <Nav />
           <Header />
           <div className="overflow-auto flex-grow">{children}</div>
           <Footer />
