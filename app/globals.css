@@ -5,8 +5,8 @@
 :root {
   --color-dark: rgb(0, 0, 0);
   --color-light: rgb(255, 255, 255);
-  --color-primary: #34dca4;
-  --color-secondary: #ff7e67;
+  --color-primary: rgb(52, 220, 164);
+  --color-secondary: rgb(255, 126, 103);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,8 +16,12 @@
   }
 }
 
-body {
-  color: rgb(var(--color-dark));
+@layer base {
+  html {
+    font-family: 'Inter', sans-serif;
+    color: var(--color-dark);
+    background-color: var(--color-light);
+  }
 }
 
 @layer components {
