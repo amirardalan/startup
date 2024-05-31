@@ -1,12 +1,13 @@
 # Startup
 
-This is a [Next.js](https://nextjs.org/) App Router project with TypeScript, Tailwind, and Prettier.
+This is a [Next.js](https://nextjs.org/) App Router project with TypeScript, Tailwind, CLSX, and Prettier.
 
 ### Features
 
-- Light/Dark/System theme toggle
-- Route navigation active page highlighting
+- Light, Dark, and System Theme toggle
+- Route-based active navigation highlighting
 - Dynamic footer copyright date
+- Next.js optimized font loading
 
 ## Getting Started
 
