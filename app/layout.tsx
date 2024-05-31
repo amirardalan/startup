@@ -40,11 +40,9 @@ export default function RootLayout({
   let theme = cookies().get('x-theme')?.value;
 
   if (theme === 'system') {
-    // If the theme is 'system', use the value from the 'x-system-theme' cookie
     theme =
       cookies().get('x-system-theme')?.value === 'dark' ? 'dark' : 'light';
   } else if (theme !== 'dark') {
-    // If the theme is not 'dark', default to 'light'
     theme = 'light';
   }
 

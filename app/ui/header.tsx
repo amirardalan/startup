@@ -4,6 +4,10 @@ import { cookies } from 'next/headers';
 const ThemeSelector = dynamic(() => import('@/components/ThemeSelector'), {
   ssr: false,
 });
+
+// TODO: Add a height and width to a wrapper div around the ThemeSelector component
+// to prevent layout shift when the component loads.
+
 const Header = () => {
   const theme = cookies().get('x-theme')?.value;
   return (
