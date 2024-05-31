@@ -17,11 +17,6 @@
 }
 
 @layer base {
-  html {
-    font-family: 'Inter', sans-serif;
-    color: var(--color-dark);
-    background-color: var(--color-light);
-  }
 }
 
 @layer components {
