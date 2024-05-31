@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
-import { cookies } from 'next/headers';
+
+import '@/app/globals.css';
+import clsx from 'clsx';
+import { getTheme } from '@/utils/getTheme';
 
 import DarkIcon from '@/public/images/favicon-dark.png';
 import LightIcon from '@/public/images/favicon-light.png';
-
-import clsx from 'clsx';
-import '@/app/globals.css';
 
 import Header from '@/ui/header';
 import Footer from '@/ui/footer';
@@ -44,14 +44,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  let theme = cookies().get('x-theme')?.value;
-
-  if (theme === 'system') {
-    theme =
-      cookies().get('x-system-theme')?.value === 'dark' ? 'dark' : 'light';
-  } else if (theme !== 'dark') {
-    theme = 'light';
-  }
+  const theme = getTheme();
 
   return (
     <html

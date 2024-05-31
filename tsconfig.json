@@ -23,6 +23,8 @@
       "@/ui/*": ["./app/ui/*"],
       "@/components/*": ["./app/components/*"],
       "@/hooks/*": ["./app/hooks/*"],
+      "@/lib/*": ["./app/lib/*"],
+      "@/utils/*": ["./app/utils/*"],
       "@/store/*": ["./app/store/*"],
       "@/types/*": ["./app/types/*"]
     }
