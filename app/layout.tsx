@@ -37,7 +37,16 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const theme = cookies().get('x-theme')?.value === 'dark' ? 'dark' : 'light';
+  let theme = cookies().get('x-theme')?.value;
+
+  if (theme === 'system') {
+    // If the theme is 'system', use the value from the 'x-system-theme' cookie
+    theme =
+      cookies().get('x-system-theme')?.value === 'dark' ? 'dark' : 'light';
+  } else if (theme !== 'dark') {
+    // If the theme is not 'dark', default to 'light'
+    theme = 'light';
+  }
 
   return (
     <html
