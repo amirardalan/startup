@@ -8,7 +8,7 @@ const ThemeSelector = dynamic(() => import('@/components/ThemeSelector'), {
 // TODO: Add a height and width to a wrapper div around the ThemeSelector component
 // to prevent layout shift when the component loads.
 
-const Header = () => {
+export default function Header() {
   const theme = cookies().get('x-theme')?.value;
   return (
     <div>
@@ -16,5 +16,4 @@ const Header = () => {
       <ThemeSelector theme={theme === 'dark' ? 'dark' : 'light'} />
     </div>
   );
-};
-export default Header;
+}

@@ -1,13 +1,14 @@
 'use client';
-import { FC, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Cookies from 'js-cookie';
 import { useRouter } from 'next/navigation';
+import { Theme } from '@/types/theme';
 
-type ThemeSelectorProps = {
-  theme: 'light' | 'dark' | 'system';
+type ThemeProps = {
+  theme: Theme;
 };
 
-const ThemeSelector: FC<ThemeSelectorProps> = ({ theme }) => {
+export default function ThemeSelector({ theme }: ThemeProps) {
   const [currentTheme, setCurrentTheme] = useState(theme);
 
   useEffect(() => {
@@ -19,7 +20,7 @@ const ThemeSelector: FC<ThemeSelectorProps> = ({ theme }) => {
   }, []);
 
   const router = useRouter();
-  console.log(theme);
+
   return (
     <div>
       <button
@@ -52,5 +53,4 @@ const ThemeSelector: FC<ThemeSelectorProps> = ({ theme }) => {
       </button>
     </div>
   );
-};
-export default ThemeSelector;
+}
