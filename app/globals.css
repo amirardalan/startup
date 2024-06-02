@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 :root {
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Merriweather', serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
   --color-dark: rgb(0, 0, 0);
   --color-light: rgb(255, 255, 255);
   --color-primary: rgb(52, 220, 164);
@@ -17,6 +21,9 @@
 }
 
 @layer base {
+  html {
+    font-family: var(--font-sans);
+  }
 }
 
 @layer components {

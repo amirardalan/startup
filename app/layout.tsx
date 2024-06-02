@@ -10,13 +10,14 @@ import LightIcon from '@/public/images/favicon-light.png';
 import Header from '@/ui/header';
 import Footer from '@/ui/footer';
 
-import { JetBrains_Mono, Merriweather } from 'next/font/google';
-const mono = JetBrains_Mono({ subsets: ['latin'] });
+import { Inter, JetBrains_Mono, Merriweather } from 'next/font/google';
+const sans = Inter({ subsets: ['latin'] });
 const serif = Merriweather({
   subsets: ['latin'],
   weight: ['400', '700'],
   style: ['normal', 'italic'],
 });
+const mono = JetBrains_Mono({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Startup()',
@@ -54,7 +55,7 @@ export default function RootLayout({
         'dark:bg-dark': theme === 'dark',
       })}
     >
-      <body className={clsx(mono, serif)}>
+      <body className={clsx(sans, serif, mono)}>
         <div className="p-16 flex flex-col min-h-screen">
           <Header />
           <div className="overflow-auto flex-grow">{children}</div>
