@@ -5,9 +5,12 @@ This is a [Next.js](https://nextjs.org/) App Router project with TypeScript, Tai
 ### Features
 
 - Light, Dark, and System Theme toggle
+- Prettier code formatting with Tailwind plugin
+- CLSX for improved logic within `className`
+- Next.js optimized font loading
+- Dynamic theme-based favicon
 - Route-based active navigation highlighting
 - Dynamic footer copyright date
-- Next.js optimized font loading
 
 ## Getting Started
 
