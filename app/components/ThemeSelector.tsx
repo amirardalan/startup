@@ -31,10 +31,7 @@ export default function ThemeSelector({ theme }: ThemeProps) {
           router.refresh();
         }}
         aria-label="switch theme"
-        className="rounded bg-indigo-600 px-2 py-1 text-xs font-semibold
-         text-white shadow-sm hover:bg-indigo-500 focus-visible:outline 
-         focus-visible:outline-2 focus-visible:outline-offset-2 
-         focus-visible:outline-indigo-600"
+        className="rounded bg-indigo-600 px-2 py-1 text-xs font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
       >
         Switch to {currentTheme === 'dark' ? 'light' : 'dark'} mode
       </button>
@@ -44,10 +41,7 @@ export default function ThemeSelector({ theme }: ThemeProps) {
           window.location.reload();
         }}
         aria-label="set system theme"
-        className="rounded bg-indigo-600 px-2 py-1 text-xs font-semibold
-   text-white shadow-sm hover:bg-indigo-500 focus-visible:outline 
-   focus-visible:outline-2 focus-visible:outline-offset-2 
-   focus-visible:outline-indigo-600 ml-2"
+        className="ml-2 rounded bg-indigo-600 px-2 py-1 text-xs font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
       >
         System Mode
       </button>

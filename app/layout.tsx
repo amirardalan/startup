@@ -59,15 +59,15 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={clsx(theme, 'h-screen grid grid-rows-layout', {
+      className={clsx(theme, 'grid h-screen grid-rows-layout', {
         'bg-light': theme === 'light',
         'dark:bg-dark': theme === 'dark',
       })}
     >
       <body className={clsx(sans, serif, mono)}>
-        <div className="p-16 flex flex-col min-h-screen">
+        <div className="flex min-h-screen flex-col p-16">
           <Header />
-          <div className="overflow-auto flex-grow">{children}</div>
+          <div className="flex-grow overflow-auto">{children}</div>
           <Footer />
         </div>
       </body>
