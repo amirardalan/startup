@@ -11,13 +11,22 @@ import Header from '@/ui/header';
 import Footer from '@/ui/footer';
 
 import { Inter, JetBrains_Mono, Merriweather } from 'next/font/google';
-const sans = Inter({ subsets: ['latin'] });
+const sans = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+});
 const serif = Merriweather({
   subsets: ['latin'],
   weight: ['400', '700'],
   style: ['normal', 'italic'],
+  display: 'swap',
 });
-const mono = JetBrains_Mono({ subsets: ['latin'] });
+const mono = JetBrains_Mono({
+  subsets: ['latin'],
+  weight: ['400', '600'],
+  style: ['normal', 'italic'],
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   title: 'Startup()',
