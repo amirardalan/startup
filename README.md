@@ -11,6 +11,7 @@ This is a [Next.js](https://nextjs.org/) App Router project with TypeScript, Tai
 - Dynamic theme-based favicon
 - Route-based active navigation highlighting
 - Dynamic footer copyright date
+- OG Image Generation via @vercel/og-image
 
 ## Getting Started
 
