@@ -47,27 +47,28 @@ export default function ThemeSelector({ theme }: ThemeProps) {
         onClick={() => handleManualTheme()}
         aria-label="switch theme"
         className={clsx(
-          'rounded px-2 py-1 text-xs font-semibold text-dark shadow-sm hover:bg-gray-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary',
+          'rounded px-2 py-1 text-xs font-semibold shadow-sm hover:bg-gray-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary',
           {
-            'bg-primary': currentTheme === 'light' || 'dark',
-            'bg-secondary': currentTheme === 'system',
+            'bg-primary text-dark': currentTheme === 'light' || 'dark',
+            'bg-secondary text-light': currentTheme === 'system',
           }
         )}
       >
-        {currentTheme === 'dark' ? '☀️' : '🌑'}
+        {currentTheme === 'dark' ? 'light' : 'dark'}
       </button>
       <button
         onClick={() => handleSystemTheme()}
         aria-label="set system theme"
         className={clsx(
-          'ml-2 rounded px-2 py-1 text-xs font-semibold text-white shadow-sm hover:bg-gray-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary',
+          'ml-2 rounded px-2 py-1 text-xs font-semibold shadow-sm hover:bg-gray-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary',
           {
-            'bg-primary': currentTheme === 'system',
-            'bg-secondary': currentTheme === 'light' || 'dark',
+            'bg-primary text-dark': currentTheme === 'system',
+            'bg-secondary text-light':
+              currentTheme === 'light' || currentTheme === 'dark',
           }
         )}
       >
-        🖥️
+        system
       </button>
     </div>
   );
