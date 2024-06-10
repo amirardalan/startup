@@ -1,19 +1,17 @@
+// Header.tsx
 import Nav from '@/ui/nav';
 import dynamic from 'next/dynamic';
-import { cookies } from 'next/headers';
+import SetTheme from '@/components/SetTheme';
 const ThemeSelector = dynamic(() => import('@/components/ThemeSelector'), {
   ssr: false,
 });
 
-// TODO: Add a height and width to a wrapper div around the ThemeSelector component
-// to prevent layout shift when the component loads.
-
 export default function Header() {
-  const theme = cookies().get('x-theme')?.value;
   return (
     <div>
       <Nav />
-      <ThemeSelector theme={theme === 'dark' ? 'dark' : 'light'} />
+      <ThemeSelector />
+      <SetTheme />
     </div>
   );
 }

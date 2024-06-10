@@ -2,14 +2,13 @@
 import { useEffect, useState } from 'react';
 import Cookies from 'js-cookie';
 import { useRouter } from 'next/navigation';
+import { useTheme } from '@/store/theme';
 import { Theme } from '@/types/theme';
 import clsx from 'clsx';
 
-type ThemeProps = {
-  theme: Theme;
-};
+export default function ThemeSelector() {
+  const { theme } = useTheme();
 
-export default function ThemeSelector({ theme }: ThemeProps) {
   const [currentTheme, setCurrentTheme] = useState<Theme>(theme);
 
   useEffect(() => {
