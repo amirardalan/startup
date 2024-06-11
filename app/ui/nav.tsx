@@ -31,16 +31,23 @@ export default function Navigation() {
           }
         )}
       >
-        <ul className="flex flex-col sm:flex-row">
+        <ul className="flex flex-col lg:flex-row">
           <li className="mr-6">
-            <Link href="/" className={clsx(pathname === '/' && 'text-primary')}>
+            <Link
+              href="/"
+              className={clsx('text-dark dark:text-light', {
+                'text-primary dark:text-primary': pathname === '/',
+              })}
+            >
               <div>Home</div>
             </Link>
           </li>
           <li>
             <Link
               href="/about"
-              className={clsx(pathname === '/about' && 'text-primary')}
+              className={clsx('text-dark dark:text-light', {
+                'text-primary dark:text-primary': pathname === '/about',
+              })}
             >
               <div>About</div>
             </Link>

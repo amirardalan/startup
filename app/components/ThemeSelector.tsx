@@ -7,25 +7,19 @@ import { Theme } from '@/types/theme';
 import clsx from 'clsx';
 
 export default function ThemeSelector() {
+  const router = useRouter();
   const { theme } = useTheme();
-
   const [currentTheme, setCurrentTheme] = useState<Theme>(theme);
 
   useEffect(() => {
-    const themeFromCookie = Cookies.get('x-theme') as Theme;
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const handleChange = () =>
+      setCurrentTheme(mediaQuery.matches ? 'dark' : 'light');
+    mediaQuery.addEventListener('change', handleChange);
+    handleChange();
 
-    if (themeFromCookie) {
-      setCurrentTheme(themeFromCookie);
-    } else if (window.matchMedia) {
-      const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      Cookies.set('x-theme', isDark ? 'dark' : 'light');
-      setCurrentTheme(isDark ? 'dark' : 'light');
-    }
+    return () => mediaQuery.removeEventListener('change', handleChange);
   }, []);
-
-  console.log(currentTheme);
-
-  const router = useRouter();
 
   const handleManualTheme = () => {
     const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
@@ -36,7 +30,7 @@ export default function ThemeSelector() {
 
   const handleSystemTheme = () => {
     Cookies.set('x-theme', 'system');
-    setCurrentTheme('system');
+    setCurrentTheme(currentTheme === 'light' ? 'dark' : 'light');
     window.location.reload();
   };
 
