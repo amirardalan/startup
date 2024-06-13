@@ -1,13 +1,12 @@
 # Startup
 
-This is a [Next.js](https://nextjs.org/) App Router project with TypeScript, Tailwind, CLSX, Prettier, and Supabase Auth.
+This is a [Next.js](https://nextjs.org/) App Router project with TypeScript, Tailwind, CLSX, and Prettier.
 
 ### Features
 
 - Light, Dark, and System Theme toggle
 - Prettier code formatting with Tailwind plugin
 - CLSX for improved logic within `className`
-- Supabase authentication
 - Next.js optimized font loading
 - Dynamic theme-based favicon
 - Route-based active navigation highlighting
