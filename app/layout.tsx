@@ -65,7 +65,7 @@ export default function RootLayout({
       })}
     >
       <body className={clsx(sans, serif, mono)}>
-        <div className="flex min-h-screen flex-col p-16">
+        <div className="flex min-h-screen flex-col p-16 pb-6">
           <Header />
           <div className="flex-grow overflow-auto">{children}</div>
           <Footer />
