@@ -24,6 +24,10 @@
   html {
     font-family: var(--font-sans);
   }
+  ::selection {
+    color: var(--color-primary);
+    background-color: var(--color-secondary);
+  }
 }
 
 @layer components {
