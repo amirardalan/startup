@@ -11,6 +11,8 @@ export default function ThemeSelector() {
   const { theme } = useTheme();
   const [currentTheme, setCurrentTheme] = useState<Theme>(theme);
 
+  console.log('Current theme:', currentTheme);
+
   useEffect(() => {
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
     const handleChange = () =>
