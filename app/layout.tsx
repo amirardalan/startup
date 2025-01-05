@@ -55,7 +55,6 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const theme = getTheme();
-  console.log(theme);
 
   return (
     <html
