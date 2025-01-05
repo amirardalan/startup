@@ -8,9 +8,9 @@ const ThemeSelector = dynamic(() => import('@/components/ThemeSelector'), {
 
 export default function Header() {
   return (
-    <div>
-      <Nav showMobileButton />
+    <div className="flex flex-row items-center justify-between py-4">
       <ThemeSelector />
+      <Nav showMobileButton />
       <SetTheme />
     </div>
   );
