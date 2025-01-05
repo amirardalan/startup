@@ -9,7 +9,7 @@ const ThemeSelector = dynamic(() => import('@/components/ThemeSelector'), {
 export default function Header() {
   return (
     <div>
-      <Nav />
+      <Nav showMobileButton />
       <ThemeSelector />
       <SetTheme />
     </div>
