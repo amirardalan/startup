@@ -10,7 +10,9 @@ export default function Header() {
   return (
     <div className="flex flex-row items-center justify-between py-4">
       <ThemeSelector />
-      <Nav showMobileButton />
+      <div className="flex flex-grow justify-end">
+        <Nav showMobileButton />
+      </div>
       <SetTheme />
     </div>
   );
