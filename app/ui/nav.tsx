@@ -33,6 +33,12 @@ export default function Navigation({ showMobileButton }: NavigationProps) {
           </svg>
         </button>
       )}
+      {isOpen && (
+        <div
+          className="fixed inset-0 z-20 bg-transparent lg:hidden"
+          onClick={toggleMenu}
+        />
+      )}
       <div
         className={clsx(
           'fixed right-0 top-0 flex h-full w-64 transform flex-col overflow-auto border-l-2 border-solid border-dark bg-light pl-10 pt-20 transition-transform duration-200 ease-in-out lg:static lg:w-auto lg:translate-x-0 lg:flex-row lg:border-none lg:p-0 dark:border-light dark:bg-dark',
