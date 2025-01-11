@@ -35,7 +35,7 @@ export default function Navigation({ showMobileButton }: NavigationProps) {
       )}
       {isOpen && (
         <div
-          className="fixed inset-0 z-20 bg-transparent lg:hidden"
+          className="z-1 fixed inset-0 bg-transparent lg:hidden"
           onClick={toggleMenu}
         />
       )}
@@ -55,6 +55,7 @@ export default function Navigation({ showMobileButton }: NavigationProps) {
               className={clsx('text-dark dark:text-light', {
                 'text-primary dark:text-primary': pathname === '/',
               })}
+              onClick={toggleMenu}
             >
               <div>Home</div>
             </Link>
@@ -65,6 +66,7 @@ export default function Navigation({ showMobileButton }: NavigationProps) {
               className={clsx('text-dark dark:text-light', {
                 'text-primary dark:text-primary': pathname === '/about',
               })}
+              onClick={toggleMenu}
             >
               <div>About</div>
             </Link>
