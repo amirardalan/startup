@@ -5,7 +5,9 @@ export default function About() {
         <div className="text-center font-mono text-3xl text-gray-400">
           About Startup()
         </div>
-        <div className="font-serif italic text-gray-600">about subtitle</div>
+        <div className="font-serif italic text-gray-600">
+          A Nextjs App Router Starter.
+        </div>
       </div>
     </main>
   );

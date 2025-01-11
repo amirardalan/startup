@@ -5,7 +5,9 @@ export default function Home() {
         <div className="text-center font-mono text-3xl text-gray-400">
           <h1>Startup()</h1>
         </div>
-        <div className="font-serif italic text-gray-600">subtitle</div>
+        <div className="font-serif italic text-gray-600">
+          A Nextjs App Router Starter.
+        </div>
       </div>
     </main>
   );
