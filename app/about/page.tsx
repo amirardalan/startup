@@ -1,13 +1,10 @@
+import PageContent from '@/components/PageContent';
+
 export default function About() {
   return (
     <main>
-      <div className="m-auto text-center">
-        <div className="text-center font-mono text-3xl text-gray-400">
-          About Startup()
-        </div>
-        <div className="font-serif italic text-gray-600">
-          A Nextjs App Router Starter.
-        </div>
+      <div className="m-auto flex justify-center text-center">
+        <PageContent />
       </div>
     </main>
   );

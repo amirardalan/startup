@@ -1,0 +1,28 @@
+'use client';
+import Image from 'next/image';
+import { usePathname } from 'next/navigation';
+
+export default function PageContent() {
+  const pathname = usePathname();
+  const pageName = pathname === '/' ? 'Home' : pathname.slice(1);
+
+  return (
+    <div className="flex flex-col items-center">
+      <div className="mb-6 flex w-full justify-center">
+        <Image
+          src="/images/favicon-dark.png"
+          alt="Logo"
+          width={128}
+          height={128}
+          className="flex justify-center"
+        />
+      </div>
+      <div className="text-center font-mono text-3xl capitalize text-gray-400">
+        {pageName} Startup()
+      </div>
+      <div className="font-serif italic text-gray-600">
+        A Nextjs App Router Starter.
+      </div>
+    </div>
+  );
+}
