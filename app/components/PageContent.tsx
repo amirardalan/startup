@@ -3,8 +3,7 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
 export default function PageContent() {
-  const pathname = usePathname();
-  const pageName = pathname === '/' ? 'Home' : pathname.slice(1);
+  const pageName = usePathname().slice(1);
 
   return (
     <div className="flex flex-col items-center">
@@ -18,7 +17,7 @@ export default function PageContent() {
         />
       </div>
       <div className="text-center font-mono text-3xl capitalize text-gray-400">
-        {pageName} Startup()
+        Startup() {pageName && '-'} {pageName}
       </div>
       <div className="font-serif italic text-gray-600">
         A Nextjs App Router Starter.
