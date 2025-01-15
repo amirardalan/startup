@@ -19,7 +19,7 @@ export default function PageContent() {
       <div className="text-center font-mono text-3xl capitalize text-gray-400">
         {!pageName || `${pageName} —`} Startup()
       </div>
-      <div className="font-serif italic text-gray-600">
+      <div className="font-serif text-xl text-gray-600">
         A Nextjs App Router Starter.
       </div>
     </div>

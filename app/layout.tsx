@@ -10,14 +10,14 @@ import LightIcon from '@/public/images/favicon-light.png';
 import Header from '@/ui/header';
 import Footer from '@/ui/footer';
 
-import { Inter, JetBrains_Mono, Merriweather } from 'next/font/google';
+import { Inter, JetBrains_Mono, DM_Serif_Text } from 'next/font/google';
 const sans = Inter({
   subsets: ['latin'],
   display: 'swap',
 });
-const serif = Merriweather({
+const serif = DM_Serif_Text({
   subsets: ['latin'],
-  weight: ['400', '700'],
+  weight: ['400'],
   style: ['normal', 'italic'],
   display: 'swap',
 });
