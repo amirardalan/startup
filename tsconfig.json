@@ -1,6 +1,10 @@
 {
   "compilerOptions": {
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -18,18 +22,46 @@
       }
     ],
     "paths": {
-      "@/*": ["./*"],
-      "@/app": ["./app/*"],
-      "@/api/*": ["./app/api/*"],
-      "@/ui/*": ["./app/ui/*"],
-      "@/components/*": ["./app/components/*"],
-      "@/hooks/*": ["./app/hooks/*"],
-      "@/lib/*": ["./app/lib/*"],
-      "@/utils/*": ["./app/utils/*"],
-      "@/store/*": ["./app/store/*"],
-      "@/types/*": ["./app/types/*"]
-    }
+      "@/*": [
+        "./*"
+      ],
+      "@/app": [
+        "./app/*"
+      ],
+      "@/api/*": [
+        "./app/api/*"
+      ],
+      "@/ui/*": [
+        "./app/ui/*"
+      ],
+      "@/components/*": [
+        "./app/components/*"
+      ],
+      "@/hooks/*": [
+        "./app/hooks/*"
+      ],
+      "@/lib/*": [
+        "./app/lib/*"
+      ],
+      "@/utils/*": [
+        "./app/utils/*"
+      ],
+      "@/store/*": [
+        "./app/store/*"
+      ],
+      "@/types/*": [
+        "./app/types/*"
+      ]
+    },
+    "target": "ES2017"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
