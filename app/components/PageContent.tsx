@@ -14,6 +14,7 @@ export default function PageContent() {
           width={128}
           height={128}
           className="flex justify-center"
+          priority
         />
       </div>
       <div className="text-center font-mono text-3xl capitalize text-gray-400">
