@@ -20,28 +20,32 @@ export default function Navigation({ showMobileButton }: NavigationProps) {
   return (
     <nav className={clsx('flex justify-end dark:bg-dark')}>
       {showMobileButton && (
-        <button className="z-10 lg:hidden" onClick={toggleMenu}>
+        <button className="z-30 lg:hidden" onClick={toggleMenu}>
           <svg
-            viewBox="0 0 20 20"
-            className={clsx('menu h-6 w-6 fill-dark dark:fill-light')}
+            viewBox="0 0 24 24"
+            className={clsx('menu h-8 w-8 fill-dark dark:fill-light')}
+            clipRule="evenodd"
+            fillRule="evenodd"
+            strokeLinejoin="round"
+            strokeMiterlimit="2"
+            xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              fillRule="evenodd"
-              d="M2 5a1 1 0 011-1h14a1 1 0 110 2H3a1 1 0 01-1-1zm0 6a1 1 0 011-1h14a1 1 0 110 2H3a1 1 0 01-1-1zm1 5a1 1 0 100 2h14a1 1 0 100-2H3z"
-              clipRule="evenodd"
+              d="m13 16.745c0-.414-.336-.75-.75-.75h-9.5c-.414 0-.75.336-.75.75s.336.75.75.75h9.5c.414 0 .75-.336.75-.75zm9-5c0-.414-.336-.75-.75-.75h-18.5c-.414 0-.75.336-.75.75s.336.75.75.75h18.5c.414 0 .75-.336.75-.75zm-4-5c0-.414-.336-.75-.75-.75h-14.5c-.414 0-.75.336-.75.75s.336.75.75.75h14.5c.414 0 .75-.336.75-.75z"
+              fillRule="nonzero"
             />
           </svg>
         </button>
       )}
       {isOpen && (
         <div
-          className="z-1 fixed inset-0 bg-transparent lg:hidden"
+          className="fixed inset-0 z-10 bg-black bg-opacity-50 backdrop-blur-sm lg:hidden"
           onClick={toggleMenu}
         />
       )}
       <div
         className={clsx(
-          'fixed right-0 top-0 flex h-full w-64 transform flex-col overflow-auto border-l-2 border-solid border-dark bg-light pl-10 pt-20 transition-transform duration-200 ease-in-out lg:static lg:w-auto lg:translate-x-0 lg:flex-row lg:border-none lg:p-0 dark:border-light dark:bg-dark',
+          'fixed right-0 top-0 z-20 flex h-full w-64 transform flex-col overflow-auto border-l-2 border-solid border-dark bg-light pl-10 pt-20 transition-transform duration-200 ease-in-out lg:static lg:w-auto lg:translate-x-0 lg:flex-row lg:border-none lg:p-0 dark:border-light dark:bg-dark',
           {
             'translate-x-full': !isOpen,
             'translate-x-0': isOpen,
