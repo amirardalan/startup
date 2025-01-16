@@ -1,10 +1,11 @@
 import { cookies } from 'next/headers';
 
-export function getTheme() {
-  let theme = cookies().get('x-theme')?.value;
+export async function getTheme() {
+  const cookieStore = await cookies();
+  let theme = cookieStore.get('x-theme')?.value;
 
   if (!theme || theme === 'system') {
-    const systemTheme = cookies().get('x-system-theme')?.value;
+    const systemTheme = cookieStore.get('x-system-theme')?.value;
     theme = systemTheme === 'dark' ? 'dark' : 'light';
   } else if (theme !== 'dark') {
     theme = 'light';

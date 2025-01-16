@@ -1,4 +1,5 @@
-// Header.tsx
+'use client';
+
 import Nav from '@/ui/nav';
 import dynamic from 'next/dynamic';
 import SetTheme from '@/components/SetTheme';
