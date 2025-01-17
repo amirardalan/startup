@@ -15,11 +15,6 @@ const SetTheme = () => {
     }
   }, [setTheme]);
 
-  const handleThemeChange = (theme: Theme) => {
-    Cookies.set('theme', theme, { sameSite: 'None', secure: true, path: '/' });
-    setTheme(theme);
-  };
-
   return null;
 };
 
