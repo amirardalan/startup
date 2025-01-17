@@ -57,14 +57,18 @@ export default async function RootLayout({
   const theme = await getTheme();
 
   return (
-    <html
-      lang="en"
-      className={clsx(theme, 'grid h-screen grid-rows-layout', {
-        'bg-light': theme === 'light',
-        'dark:bg-dark': theme === 'dark',
-      })}
-    >
-      <body className={clsx(sans, serif, mono, 'bg-white dark:bg-black')}>
+    <html lang="en">
+      <body
+        className={
+          (sans.className,
+          serif.className,
+          mono.className,
+          clsx(theme, 'grid h-screen grid-rows-layout', {
+            'bg-light': theme === 'light',
+            'dark:bg-dark': theme === 'dark',
+          }))
+        }
+      >
         <div className="flex min-h-screen flex-col bg-white p-16 pb-6 dark:bg-black">
           <Header />
           <div className="flex-grow overflow-auto">{children}</div>
