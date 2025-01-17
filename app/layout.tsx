@@ -64,8 +64,8 @@ export default async function RootLayout({
         'dark:bg-dark': theme === 'dark',
       })}
     >
-      <body className={clsx(sans, serif, mono)}>
-        <div className="flex min-h-screen flex-col p-16 pb-6">
+      <body className={clsx(sans, serif, mono, 'bg-white dark:bg-black')}>
+        <div className="flex min-h-screen flex-col bg-white p-16 pb-6 dark:bg-black">
           <Header />
           <div className="flex-grow overflow-auto">{children}</div>
           <Footer />

@@ -12,14 +12,33 @@ export default function ThemeSelector() {
   const [currentTheme, setCurrentTheme] = useState<Theme>(theme);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    const handleChange = () =>
-      setCurrentTheme(mediaQuery.matches ? 'dark' : 'light');
-    mediaQuery.addEventListener('change', handleChange);
-    handleChange();
-
-    return () => mediaQuery.removeEventListener('change', handleChange);
+    const savedTheme = Cookies.get('x-theme');
+    if (savedTheme && savedTheme !== 'system') {
+      setCurrentTheme(savedTheme as Theme);
+    } else {
+      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+      const systemTheme = mediaQuery.matches ? 'dark' : 'light';
+      setCurrentTheme(systemTheme);
+      mediaQuery.addEventListener('change', handleChange);
+      handleChange();
+      return () => mediaQuery.removeEventListener('change', handleChange);
+    }
   }, []);
+
+  useEffect(() => {
+    if (currentTheme === 'dark') {
+      document.body.classList.add('dark');
+    } else {
+      document.body.classList.remove('dark');
+    }
+    document.body.className = currentTheme; // Apply the theme class to the body
+  }, [currentTheme]);
+
+  const handleChange = () => {
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const systemTheme = mediaQuery.matches ? 'dark' : 'light';
+    setCurrentTheme(systemTheme);
+  };
 
   const handleManualTheme = () => {
     const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
@@ -30,8 +49,10 @@ export default function ThemeSelector() {
 
   const handleSystemTheme = () => {
     Cookies.set('x-theme', 'system');
-    setCurrentTheme(currentTheme === 'light' ? 'dark' : 'light');
-    window.location.reload();
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const systemTheme = mediaQuery.matches ? 'dark' : 'light';
+    setCurrentTheme(systemTheme);
+    router.refresh();
   };
 
   return (
