@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --font-sans: 'Inter', sans-serif;
-  --font-serif: 'DM Serif Text', serif;
+  --font-sans: 'Exo 2', sans-serif;
+  --font-serif: 'Playwrite US Modern', serif;
   --font-mono: 'JetBrains Mono', monospace;
 
   --color-dark: rgb(0, 0, 0);

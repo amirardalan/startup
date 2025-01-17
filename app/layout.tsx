@@ -10,15 +10,14 @@ import LightIcon from '@/public/images/favicon-light.png';
 import Header from '@/ui/header';
 import Footer from '@/ui/footer';
 
-import { Inter, JetBrains_Mono, DM_Serif_Text } from 'next/font/google';
-const sans = Inter({
+import { Exo_2, JetBrains_Mono, Playwrite_US_Modern } from 'next/font/google';
+const sans = Exo_2({
   subsets: ['latin'],
   display: 'swap',
 });
-const serif = DM_Serif_Text({
-  subsets: ['latin'],
+const serif = Playwrite_US_Modern({
   weight: ['400'],
-  style: ['normal', 'italic'],
+  style: ['normal'],
   display: 'swap',
 });
 const mono = JetBrains_Mono({
