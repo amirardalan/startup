@@ -3,19 +3,7 @@ import { ImageResponse } from 'next/og';
 export async function GET() {
   return new ImageResponse(
     (
-      <div
-        style={{
-          fontSize: 40,
-          color: 'black',
-          background: 'white',
-          width: '100%',
-          height: '100%',
-          padding: '50px 200px',
-          textAlign: 'center',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}
-      >
+      <div className="flex h-full w-full items-center justify-center bg-white p-12 text-center text-4xl text-black">
         👋 Hello
       </div>
     ),
