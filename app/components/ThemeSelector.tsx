@@ -56,33 +56,34 @@ export default function ThemeSelector() {
   };
 
   return (
-    <div>
-      <button
-        onClick={() => handleManualTheme()}
-        aria-label="switch theme"
-        className={clsx(
-          'rounded px-2 py-1 text-xs font-semibold shadow-sm hover:bg-gray-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary',
-          {
-            'bg-primary text-dark': currentTheme === 'light' || 'dark',
-            'bg-secondary text-light': currentTheme === 'system',
-          }
-        )}
-      >
-        {currentTheme === 'dark' ? 'light' : 'dark'}
-      </button>
+    <div className="flex align-top">
+      <label className="relative inline-flex cursor-pointer items-center">
+        <input
+          type="checkbox"
+          checked={currentTheme === 'dark'}
+          onChange={() => handleManualTheme()}
+          className="peer sr-only"
+        />
+        <div className="h-6 w-11 rounded-full bg-gray-200 transition-all duration-300 ease-in-out after:absolute after:left-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:bg-primary peer-checked:after:translate-x-full peer-checked:after:border-white peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-primary dark:bg-gray-700" />
+      </label>
+
       <button
         onClick={() => handleSystemTheme()}
-        aria-label="set system theme"
+        aria-label="use system theme"
         className={clsx(
-          'ml-2 rounded px-2 py-1 text-xs font-semibold shadow-sm hover:bg-gray-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary',
-          {
-            'bg-primary text-dark': currentTheme === 'system',
-            'bg-secondary text-light':
-              currentTheme === 'light' || currentTheme === 'dark',
-          }
+          'ml-2 rounded-2xl border-[1px] border-black bg-light p-1.5 text-xs font-semibold dark:border-white dark:bg-dark',
+          { 'bg-secondary text-light': currentTheme === 'system' }
         )}
       >
-        system
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="10"
+          height="10"
+          viewBox="0 0 24 24"
+          fill={currentTheme === 'dark' ? 'white' : 'black'}
+        >
+          <path d="M0 1v17h24v-17h-24zm22 15h-20v-13h20v13zm-6.599 4l2.599 3h-12l2.599-3h6.802z" />
+        </svg>
       </button>
     </div>
   );
