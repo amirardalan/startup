@@ -9,7 +9,7 @@ const ThemeSelector = dynamic(() => import('@/components/ThemeSelector'), {
 
 export default function Header() {
   return (
-    <div className="flex flex-row items-center justify-between p-2 lg:py-4">
+    <div className="flex flex-row items-center justify-between">
       <div className="z-40">
         <ThemeSelector />
       </div>

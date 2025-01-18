@@ -68,7 +68,7 @@ export default async function RootLayout({
           }))
         }
       >
-        <div className="flex min-h-screen flex-col bg-white p-4 pb-6 lg:p-8 dark:bg-black">
+        <div className="flex min-h-screen flex-col bg-white p-4 lg:p-8 dark:bg-black">
           <Header />
           <div className="flex-grow overflow-auto">{children}</div>
           <Footer />
