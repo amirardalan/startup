@@ -6,7 +6,7 @@ export default function PageContent() {
   const pageName = usePathname().slice(1);
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="mt-12 flex flex-col items-center">
       <div className="mb-6 flex w-full justify-center">
         <Image
           src="/images/favicon-dark.png"
