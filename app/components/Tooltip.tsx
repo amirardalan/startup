@@ -44,7 +44,7 @@ const Tooltip: FC<TooltipProps> = ({ pos, text, children }) => {
       {children}
       {isHovered && (
         <div
-          className={`absolute z-50 rounded bg-gray-800 px-2 py-1 text-sm text-white shadow-md ${
+          className={`absolute z-50 rounded bg-gray-800 px-2 py-1 font-mono text-xs uppercase text-white shadow-md ${
             pos === 't'
               ? '-top-8 left-1/2 -translate-x-1/2'
               : pos === 'r'

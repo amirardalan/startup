@@ -32,7 +32,7 @@ export default function ThemeSelector() {
     } else {
       document.body.classList.remove('dark');
     }
-    document.body.className = currentTheme; // Apply the theme class to the body
+    document.body.className = currentTheme;
   }, [currentTheme]);
 
   const handleChange = () => {
@@ -60,7 +60,7 @@ export default function ThemeSelector() {
     <div className="flex align-middle">
       <Tooltip
         pos="r"
-        text={`Activate ${currentTheme === 'dark' ? 'light' : 'dark'} theme`}
+        text={`${currentTheme === 'dark' ? 'light' : 'dark'} mode`}
       >
         <button className="m-0 p-0">
           <label className="relative inline-flex cursor-pointer items-center align-top">
@@ -75,7 +75,7 @@ export default function ThemeSelector() {
         </button>
       </Tooltip>
 
-      <Tooltip pos="r" text={`Use system theme`}>
+      <Tooltip pos="r" text={`system theme`}>
         <button
           onClick={() => handleSystemTheme()}
           aria-label="use system theme"
