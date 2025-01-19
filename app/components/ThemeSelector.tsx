@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import { useTheme } from '@/store/theme';
 import { Theme } from '@/types/theme';
 import clsx from 'clsx';
+import Tooltip from './Tooltip';
 
 export default function ThemeSelector() {
   const router = useRouter();
@@ -56,35 +57,44 @@ export default function ThemeSelector() {
   };
 
   return (
-    <div className="flex align-top">
-      <label className="relative inline-flex cursor-pointer items-center">
-        <input
-          type="checkbox"
-          checked={currentTheme === 'dark'}
-          onChange={() => handleManualTheme()}
-          className="peer sr-only"
-        />
-        <div className="h-6 w-11 rounded-full bg-gray-200 transition-all duration-300 ease-in-out after:absolute after:left-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:bg-white after:transition-all after:content-[''] peer-checked:after:translate-x-full peer-checked:after:border-white peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-primary dark:bg-gray-700 after:dark:bg-dark" />
-      </label>
-
-      <button
-        onClick={() => handleSystemTheme()}
-        aria-label="use system theme"
-        className={clsx(
-          'ml-2 rounded-2xl border-[1px] border-black bg-light p-1.5 text-xs font-semibold dark:border-white dark:bg-dark',
-          { 'bg-secondary text-light': currentTheme === 'system' }
-        )}
+    <div className="flex align-middle">
+      <Tooltip
+        pos="r"
+        text={`Activate ${currentTheme === 'dark' ? 'light' : 'dark'} theme`}
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="10"
-          height="10"
-          viewBox="0 0 24 24"
-          fill={currentTheme === 'dark' ? 'white' : 'black'}
+        <button className="m-0 p-0">
+          <label className="relative inline-flex cursor-pointer items-center align-top">
+            <input
+              type="checkbox"
+              checked={currentTheme === 'dark'}
+              onChange={() => handleManualTheme()}
+              className="peer sr-only"
+            />
+            <div className="h-6 w-11 rounded-full bg-gray-200 transition-all duration-300 ease-in-out after:absolute after:left-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:bg-white after:transition-all after:content-[''] peer-checked:after:translate-x-full peer-checked:after:border-white peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-primary dark:bg-gray-700 after:dark:bg-dark" />
+          </label>
+        </button>
+      </Tooltip>
+
+      <Tooltip pos="r" text={`Use system theme`}>
+        <button
+          onClick={() => handleSystemTheme()}
+          aria-label="use system theme"
+          className={clsx(
+            'ml-2 rounded-2xl border-[1px] border-black bg-light p-1 text-xs font-semibold dark:border-white dark:bg-dark',
+            { 'bg-secondary text-light': currentTheme === 'system' }
+          )}
         >
-          <path d="M0 1v17h24v-17h-24zm22 15h-20v-13h20v13zm-6.599 4l2.599 3h-12l2.599-3h6.802z" />
-        </svg>
-      </button>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="12"
+            height="12"
+            viewBox="0 0 24 24"
+            fill={currentTheme === 'dark' ? 'white' : 'black'}
+          >
+            <path d="M0 1v17h24v-17h-24zm22 15h-20v-13h20v13zm-6.599 4l2.599 3h-12l2.599-3h6.802z" />
+          </svg>
+        </button>
+      </Tooltip>
     </div>
   );
 }
