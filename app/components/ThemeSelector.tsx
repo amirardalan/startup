@@ -56,6 +56,16 @@ export default function ThemeSelector() {
     router.refresh();
   };
 
+  console.log(`
+     █████  ███    ███ ██ ██████  
+    ██   ██ ████  ████ ██ ██   ██ 
+    ███████ ██ ████ ██ ██ ██████  
+    ██   ██ ██  ██  ██ ██ ██   ██ 
+    ██   ██ ██      ██ ██ ██   ██ 
+    <--------------------------->
+    Design & Code by Amir Ardalan
+  `);
+
   return (
     <div className="flex align-middle">
       <Tooltip
