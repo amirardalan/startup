@@ -90,7 +90,7 @@ export default function ThemeSelector() {
           onClick={() => handleSystemTheme()}
           aria-label="use system theme"
           className={clsx(
-            'ml-2 rounded-2xl border-[1px] border-black bg-light p-1 text-xs font-semibold dark:border-white dark:bg-dark',
+            'ml-4 rounded-2xl border-[1px] border-black bg-light p-1 text-xs font-semibold dark:border-white dark:bg-dark',
             { 'bg-secondary text-light': currentTheme === 'system' }
           )}
         >
