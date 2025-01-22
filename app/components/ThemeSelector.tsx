@@ -13,6 +13,15 @@ export default function ThemeSelector() {
   const [currentTheme, setCurrentTheme] = useState<Theme>(theme);
 
   useEffect(() => {
+    if (currentTheme === 'system') {
+      const prefersDark = window.matchMedia(
+        '(prefers-color-scheme: dark)'
+      ).matches;
+      setCurrentTheme(prefersDark ? 'dark' : 'light');
+    }
+  }, [currentTheme]);
+
+  useEffect(() => {
     const savedTheme = Cookies.get('x-theme');
     if (savedTheme && savedTheme !== 'system') {
       setCurrentTheme(savedTheme as Theme);
