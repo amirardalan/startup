@@ -4,6 +4,7 @@ This is a [Next.js](https://nextjs.org/) App Router project with TypeScript, Tai
 
 ### Features
 
+- Autentication with [Auth.js](https://authjs.dev/getting-started/installation?framework=next-js)
 - State management with [Zustand](https://github.com/pmndrs/zustand)
 - Light, Dark, and System Theme toggle
 - Prettier code formatting with [Tailwind plugin](https://tailwindcss.com/blog/automatic-class-sorting-with-prettier)
@@ -22,6 +23,16 @@ This is a [Next.js](https://nextjs.org/) App Router project with TypeScript, Tai
 
 ```bash
 bun install
+```
+
+2. Create a `.env.local` file in the root of the project and add the following:
+
+```bash
+AUTH_GITHUB_ID=<GitHub Client ID>
+AUTH_GITHUB_SECRET=<GitHub Client Secret>
+
+NEXTAUTH_URL=http://localhost:3000
+NEXTAUTH_SECRET=jF+ztxlWTCqSQBsQYpfQvLfgXB5TBWxPtiGK5drpXE=
 ```
 
 2. Run the development server:
