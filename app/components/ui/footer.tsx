@@ -1,4 +1,4 @@
-import Nav from '@/ui/nav';
+import Nav from '@/components/ui/nav';
 
 export default function Footer() {
   return (

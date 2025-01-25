@@ -1,4 +1,4 @@
-import Nav from '@/ui/nav';
+import Nav from '@/components/ui/nav';
 import SetTheme from '@/components/theme/set-theme';
 import ThemeSelector from '@/components/theme/theme-selector';
 import { auth } from '@/auth';
