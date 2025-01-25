@@ -53,11 +53,11 @@ export default function Navigation({ showMobileButton }: NavigationProps) {
           <span className={getNavItemClass('/about')}>About</span>
         </Link>
         {session ? (
-          <Link href="/auth/logout">
+          <Link href="/logout">
             <span className={getNavItemClass('/logout', true)}>Logout</span>
           </Link>
         ) : (
-          <Link href="/auth/login">
+          <Link href="/login">
             <span className={getNavItemClass('/login', true)}>Login</span>
           </Link>
         )}

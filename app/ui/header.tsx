@@ -1,16 +1,10 @@
-'use client';
-
 import Nav from '@/ui/nav';
-import dynamic from 'next/dynamic';
 import SetTheme from '@/components/SetTheme';
-const ThemeSelector = dynamic(() => import('@/components/ThemeSelector'), {
-  ssr: false,
-});
+import ThemeSelector from '@/components/ThemeSelector';
+import { auth } from '@/auth';
 
-import { useSession } from 'next-auth/react';
-
-export default function Header() {
-  const { data: session, status } = useSession();
+export default async function Header() {
+  const session = await auth();
 
   return (
     <div className="flex flex-row items-center justify-between">
@@ -18,7 +12,9 @@ export default function Header() {
         <ThemeSelector />
       </div>
       <div className="ml-6 text-dark dark:text-light">
-        {session?.user?.name}
+        {session
+          ? `Welcome, ${session?.user?.name?.split(' ')[0]}`
+          : 'Welcome, Guest'}
       </div>
       <div className="flex flex-grow justify-end">
         <Nav showMobileButton />
