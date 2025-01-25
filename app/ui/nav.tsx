@@ -26,6 +26,10 @@ export default function Navigation({ showMobileButton }: NavigationProps) {
     });
   };
 
+  const handleNavItemClick = () => {
+    setIsOpen(false);
+  };
+
   return (
     <nav className={clsx('flex justify-end dark:bg-dark')}>
       {showMobileButton && (
@@ -49,18 +53,18 @@ export default function Navigation({ showMobileButton }: NavigationProps) {
           }
         )}
       >
-        <Link href="/">
+        <Link href="/" onClick={handleNavItemClick}>
           <span className={getNavItemClass('/')}>Home</span>
         </Link>
-        <Link href="/about">
+        <Link href="/about" onClick={handleNavItemClick}>
           <span className={getNavItemClass('/about')}>About</span>
         </Link>
         {session ? (
-          <Link href="/logout">
+          <Link href="/logout" onClick={handleNavItemClick}>
             <span className={getNavItemClass('/logout', true)}>Logout</span>
           </Link>
         ) : (
-          <Link href="/login">
+          <Link href="/login" onClick={handleNavItemClick}>
             <span className={getNavItemClass('/login', true)}>Login</span>
           </Link>
         )}
