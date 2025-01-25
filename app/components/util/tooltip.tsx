@@ -1,5 +1,5 @@
 import { FC, useState, useEffect, useRef, ReactNode } from 'react';
-import { useMediaQuery } from '@/hooks/useMediaQuery';
+import { useMediaQuery } from '@/app/hooks/mediaquery';
 
 type TooltipProps = {
   pos?: 't' | 'r' | 'b' | 'l' | 'cursor';

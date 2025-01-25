@@ -1,6 +1,6 @@
 import Nav from '@/ui/nav';
-import SetTheme from '@/components/SetTheme';
-import ThemeSelector from '@/components/ThemeSelector';
+import SetTheme from '@/components/theme/set-theme';
+import ThemeSelector from '@/components/theme/theme-selector';
 import { auth } from '@/auth';
 
 export default async function Header() {

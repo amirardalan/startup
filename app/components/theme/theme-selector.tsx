@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import Cookies from 'js-cookie';
 import { useRouter } from 'next/navigation';
-import Tooltip from '@/components/Tooltip';
+import Tooltip from '@/app/components/util/tooltip';
 import { useTheme } from '@/store/theme';
 import { Theme } from '@/types/theme';
 
