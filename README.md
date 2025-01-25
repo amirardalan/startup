@@ -19,15 +19,16 @@ This is a [Next.js](https://nextjs.org/) App Router project with TypeScript, Tai
 
 ## Getting Started
 
-1. Install dependencies
+### Setup
 
 ```bash
 bun install
 ```
 
-2. Create a `.env.local` file in the root of the project and add the following:
+Then, set up your [GitHub oAuth App](https://authjs.dev/getting-started/providers/github?framework=next-js) and add your GitHub Client ID and Secret in a `.env.local` file:
 
-```bash
+```ts
+// .env.local
 AUTH_GITHUB_ID=<GitHub Client ID>
 AUTH_GITHUB_SECRET=<GitHub Client Secret>
 
@@ -35,7 +36,13 @@ NEXTAUTH_URL=http://localhost:3000
 NEXTAUTH_SECRET=<Next Auth Secret>
 ```
 
-2. Run the development server:
+And finally, generate a Next Auth secret which will automatically overwrite the placeholder in the `.env.local` file:
+
+```bash
+npx auth secret
+```
+
+### Run
 
 ```bash
 bun dev
