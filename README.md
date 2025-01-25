@@ -4,6 +4,7 @@ This is a [Next.js](https://nextjs.org/) App Router project with TypeScript, Tai
 
 ### Features
 
+- Autentication with [Auth.js](https://authjs.dev/getting-started/installation?framework=next-js)
 - State management with [Zustand](https://github.com/pmndrs/zustand)
 - Light, Dark, and System Theme toggle
 - Prettier code formatting with [Tailwind plugin](https://tailwindcss.com/blog/automatic-class-sorting-with-prettier)
