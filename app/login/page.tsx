@@ -1,10 +1,10 @@
-import LogIn from '@/app/components/auth/LogIn';
+import LogInButton from '@/app/components/auth/LogInButton';
 
 export default function Login() {
   return (
     <main>
       <div className="m-auto flex justify-center text-center">
-        <LogIn />
+        <LogInButton />
       </div>
     </main>
   );
