@@ -4,6 +4,7 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import clsx from 'clsx';
 import { useState } from 'react';
+import { useSession } from 'next-auth/react';
 
 interface NavigationProps {
   showMobileButton?: boolean;
@@ -12,6 +13,7 @@ interface NavigationProps {
 export default function Navigation({ showMobileButton }: NavigationProps) {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
+  const { data: session, status } = useSession();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -50,6 +52,15 @@ export default function Navigation({ showMobileButton }: NavigationProps) {
         <Link href="/about">
           <span className={getNavItemClass('/about')}>About</span>
         </Link>
+        {session ? (
+          <Link href="/auth/logout">
+            <span className={getNavItemClass('/logout', true)}>Logout</span>
+          </Link>
+        ) : (
+          <Link href="/auth/login">
+            <span className={getNavItemClass('/login', true)}>Login</span>
+          </Link>
+        )}
       </div>
     </nav>
   );
