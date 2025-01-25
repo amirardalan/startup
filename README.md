@@ -32,7 +32,7 @@ AUTH_GITHUB_ID=<GitHub Client ID>
 AUTH_GITHUB_SECRET=<GitHub Client Secret>
 
 NEXTAUTH_URL=http://localhost:3000
-NEXTAUTH_SECRET=jF+ztxlWTCqSQBsQYpfQvLfgXB5TBWxPtiGK5drpXE=
+NEXTAUTH_SECRET=<Next Auth Secret>
 ```
 
 2. Run the development server:
