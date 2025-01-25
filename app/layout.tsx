@@ -10,6 +10,8 @@ import LightIcon from '@/public/images/favicon-light.png';
 import Header from '@/ui/header';
 import Footer from '@/ui/footer';
 
+import { SessionProvider } from 'next-auth/react';
+
 import { Exo_2, JetBrains_Mono, Playwrite_US_Modern } from 'next/font/google';
 const sans = Exo_2({
   subsets: ['latin'],
@@ -56,24 +58,26 @@ export default async function RootLayout({
   const theme = await getTheme();
 
   return (
-    <html lang="en">
-      <body
-        className={
-          (sans.className,
-          serif.className,
-          mono.className,
-          clsx(theme, 'grid h-screen grid-rows-layout', {
-            'bg-light': theme === 'light',
-            'dark:bg-dark': theme === 'dark',
-          }))
-        }
-      >
-        <div className="flex min-h-screen flex-col bg-white p-4 lg:p-8 dark:bg-black">
-          <Header />
-          <div className="flex-grow overflow-auto">{children}</div>
-          <Footer />
-        </div>
-      </body>
-    </html>
+    <SessionProvider>
+      <html lang="en">
+        <body
+          className={
+            (sans.className,
+            serif.className,
+            mono.className,
+            clsx(theme, 'grid h-screen grid-rows-layout', {
+              'bg-light': theme === 'light',
+              'dark:bg-dark': theme === 'dark',
+            }))
+          }
+        >
+          <div className="flex min-h-screen flex-col bg-white p-4 lg:p-8 dark:bg-black">
+            <Header />
+            <div className="flex-grow overflow-auto">{children}</div>
+            <Footer />
+          </div>
+        </body>
+      </html>
+    </SessionProvider>
   );
 }

@@ -7,11 +7,18 @@ const ThemeSelector = dynamic(() => import('@/components/ThemeSelector'), {
   ssr: false,
 });
 
+import { useSession } from 'next-auth/react';
+
 export default function Header() {
+  const { data: session, status } = useSession();
+
   return (
     <div className="flex flex-row items-center justify-between">
       <div className="z-40">
         <ThemeSelector />
+      </div>
+      <div className="ml-6 text-dark dark:text-light">
+        {session?.user?.name}
       </div>
       <div className="flex flex-grow justify-end">
         <Nav showMobileButton />
