@@ -103,17 +103,20 @@ export default function ThemeMenu() {
         <div className="absolute right-0 z-10 mt-2 w-28 rounded-md bg-white shadow-lg dark:bg-gray-800">
           <button
             className="block w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
-            onClick={() => handleThemeChange('light')}>
+            onClick={() => handleThemeChange('light')}
+          >
             Light
           </button>
           <button
             className="block w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
-            onClick={() => handleThemeChange('dark')}>
+            onClick={() => handleThemeChange('dark')}
+          >
             Dark
           </button>
           <button
             className="block w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
-            onClick={() => handleThemeChange('system')}>
+            onClick={() => handleThemeChange('system')}
+          >
             System
           </button>
         </div>

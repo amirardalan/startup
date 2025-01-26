@@ -73,7 +73,8 @@ export default function ThemeSelector() {
     <div className="flex align-middle">
       <Tooltip
         pos="r"
-        text={`${currentTheme === 'dark' ? 'light' : 'dark'} mode`}>
+        text={`${currentTheme === 'dark' ? 'light' : 'dark'} mode`}
+      >
         <button className="m-0 p-0">
           <label className="relative inline-flex cursor-pointer items-center align-top">
             <input

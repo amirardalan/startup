@@ -36,7 +36,8 @@ export default function Navigation({ showMobileButton }: NavigationProps) {
         <button className="z-30 lg:hidden" onClick={toggleMenu}>
           <svg
             viewBox="0 0 24 24"
-            className={clsx('menu h-8 w-8 fill-dark dark:fill-light')}>
+            className={clsx('menu h-8 w-8 fill-dark dark:fill-light')}
+          >
             <path
               d="m11 16.745c0-.414.336-.75.75-.75h9.5c.414 0 .75.336.75.75s-.336.75-.75.75h-9.5c-.414 0-.75-.336-.75-.75zm-9-5c0-.414.336-.75.75-.75h18.5c.414 0 .75.336.75.75s-.336.75-.75.75h-18.5c-.414 0-.75-.336-.75-.75zm4-5c0-.414.336-.75.75-.75h14.5c.414 0 .75.336.75.75s-.336.75-.75.75h-14.5c-.414 0-.75-.336-.75-.75z"
               fillRule="nonzero"
@@ -50,7 +51,8 @@ export default function Navigation({ showMobileButton }: NavigationProps) {
           {
             'translate-x-full': !isOpen,
           }
-        )}>
+        )}
+      >
         <Link href="/" onClick={handleNavItemClick}>
           <span className={getNavItemClass('/')}>Home</span>
         </Link>
