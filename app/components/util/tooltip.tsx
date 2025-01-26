@@ -39,8 +39,7 @@ const Tooltip: FC<TooltipProps> = ({ pos, text, children }) => {
       ref={ref}
       className="relative inline-block"
       onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
+      onMouseLeave={() => setIsHovered(false)}>
       {children}
       {isHovered && (
         <div
@@ -59,8 +58,7 @@ const Tooltip: FC<TooltipProps> = ({ pos, text, children }) => {
             pos === 'cursor'
               ? { top: mousePosition.y, left: mousePosition.x }
               : {}
-          }
-        >
+          }>
           {text}
         </div>
       )}

@@ -22,14 +22,17 @@ export default function ThemeSelector() {
 
   useEffect(() => {
     const savedTheme = Cookies.get('x-theme');
+
     if (savedTheme && savedTheme !== 'system') {
       setCurrentTheme(savedTheme as Theme);
     } else {
       const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
       const systemTheme = mediaQuery.matches ? 'dark' : 'light';
+
       setCurrentTheme(systemTheme);
       mediaQuery.addEventListener('change', handleChange);
       handleChange();
+
       return () => mediaQuery.removeEventListener('change', handleChange);
     }
   }, []);
@@ -70,8 +73,7 @@ export default function ThemeSelector() {
     <div className="flex align-middle">
       <Tooltip
         pos="r"
-        text={`${currentTheme === 'dark' ? 'light' : 'dark'} mode`}
-      >
+        text={`${currentTheme === 'dark' ? 'light' : 'dark'} mode`}>
         <button className="m-0 p-0">
           <label className="relative inline-flex cursor-pointer items-center align-top">
             <input
