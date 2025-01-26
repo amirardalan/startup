@@ -1,7 +1,8 @@
-import Nav from '@/components/ui/nav';
+import { auth } from '@/auth';
+
 import SetTheme from '@/components/theme/set-theme';
 import ThemeSelector from '@/components/theme/theme-selector';
-import { auth } from '@/auth';
+import Menu from '@/components/ui/menu';
 
 export default async function Header() {
   const session = await auth();
@@ -17,7 +18,7 @@ export default async function Header() {
           : 'Welcome, Guest'}
       </div>
       <div className="flex flex-grow justify-end">
-        <Nav showMobileButton />
+        <Menu />
       </div>
       <SetTheme />
     </div>

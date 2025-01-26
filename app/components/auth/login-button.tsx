@@ -10,7 +10,7 @@ export default function LogInButton() {
       <button
         type="submit"
         className="m-0 rounded-md bg-dark p-3 font-mono text-light dark:bg-light dark:text-dark">
-        SSO (GitHub)
+        Login (GitHub)
       </button>
     </form>
   );
