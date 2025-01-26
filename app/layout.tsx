@@ -61,16 +61,12 @@ export default async function RootLayout({
     <SessionProvider>
       <html lang="en">
         <body
-          className={
-            (sans.className,
-            serif.className,
-            mono.className,
-            clsx(theme, 'grid h-screen grid-rows-layout', {
-              'bg-light': theme === 'light',
-              'dark:bg-dark': theme === 'dark',
-            }))
-          }>
-          <div className="flex min-h-screen flex-col bg-white p-4 lg:p-8 dark:bg-black">
+          className={clsx(theme, 'grid h-screen grid-rows-layout', {
+            'bg-light': theme === 'light',
+            'dark:bg-dark': theme === 'dark',
+          })}
+        >
+          <div className="flex min-h-screen flex-col p-4 lg:p-8">
             <Header />
             <div className="flex-grow overflow-auto">{children}</div>
             <Footer />
