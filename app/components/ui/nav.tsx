@@ -59,15 +59,6 @@ export default function Navigation({ showMobileButton }: NavigationProps) {
         <Link href="/about" onClick={handleNavItemClick}>
           <span className={getNavItemClass('/about')}>About</span>
         </Link>
-        {session ? (
-          <Link href="/logout" onClick={handleNavItemClick}>
-            <span className={getNavItemClass('/logout', true)}>Logout</span>
-          </Link>
-        ) : (
-          <Link href="/login" onClick={handleNavItemClick}>
-            <span className={getNavItemClass('/login', true)}>Login</span>
-          </Link>
-        )}
       </div>
     </nav>
   );
