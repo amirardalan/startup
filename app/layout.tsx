@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 import '@/app/globals.css';
 import clsx from 'clsx';
-import { getTheme } from '@/utils/getTheme';
+import { getTheme } from '@/app/utils/get-theme';
 
 import DarkIcon from '@/public/images/favicon-dark.png';
 import LightIcon from '@/public/images/favicon-light.png';
