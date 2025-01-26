@@ -3,7 +3,7 @@ import { auth } from '@/auth';
 import LoginButton from '@/components/auth/login-button';
 import LogOutButton from '@/components/auth/logout-button';
 
-export default async function Menu() {
+export default async function AuthMenu() {
   const session = await auth();
 
   return (
