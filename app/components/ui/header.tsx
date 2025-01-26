@@ -1,6 +1,4 @@
 import { auth } from '@/auth';
-
-import SetTheme from '@/components/theme/set-theme';
 import ThemeMenu from '@/components/theme/theme-menu';
 import AuthMenu from '@/app/components/auth/menu';
 
@@ -22,7 +20,6 @@ export default async function Header() {
           <AuthMenu />
         </div>
       </div>
-      <SetTheme />
     </div>
   );
 }
