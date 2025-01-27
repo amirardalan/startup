@@ -9,6 +9,9 @@ const config: Config = {
       mono: ['JetBrains Mono', 'monospace'],
     },
     extend: {
+      fontSize: {
+        xxs: '.75rem',
+      },
       colors: {
         light: 'var(--color-light)',
         dark: 'var(--color-dark)',
