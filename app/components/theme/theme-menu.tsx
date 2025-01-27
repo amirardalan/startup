@@ -57,13 +57,14 @@ export default function ThemeMenu() {
       </Tooltip>
       {menuOpen && (
         <div className="absolute right-0 z-10 mt-2 w-28 rounded-md bg-white shadow-lg dark:bg-gray-800 dark:text-light">
-          {(['light', 'dark', 'system'] as Theme[]).map((t) => (
+          {(['light', 'dark', 'system'] as Theme[]).map((t, index, array) => (
             <button
               key={t}
-              className="block w-full px-4 py-2 text-left text-sm hover:bg-gray-100 dark:text-light dark:hover:bg-gray-700"
+              className={`flex w-full items-center justify-between px-4 py-2 text-left text-sm hover:bg-gray-100 dark:text-light dark:hover:bg-gray-700 ${index === 0 ? 'rounded-t-md' : ''} ${index === array.length - 1 ? 'rounded-b-md' : 'border-b border-gray-200 dark:border-gray-700'} `}
               onClick={() => handleThemeChange(t)}
             >
-              {t.charAt(0).toUpperCase() + t.slice(1)} {theme === t && '✓'}
+              <span>{t.charAt(0).toUpperCase() + t.slice(1)}</span>
+              {theme === t && <span>✓</span>}
             </button>
           ))}
         </div>
