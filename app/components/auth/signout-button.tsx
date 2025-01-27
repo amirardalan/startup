@@ -1,6 +1,6 @@
 import { signOut } from '@/auth';
 
-export default function LogOutButton() {
+export default function SignOutButton() {
   return (
     <form
       action={async () => {
@@ -12,7 +12,7 @@ export default function LogOutButton() {
         type="submit"
         className="m-0 min-w-24 rounded-lg bg-dark px-2 py-1.5 font-mono text-light dark:bg-light dark:text-dark"
       >
-        Logout
+        Sign out
       </button>
     </form>
   );

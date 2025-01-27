@@ -1,6 +1,6 @@
 import { signIn } from '@/auth';
 
-export default function LogInButton() {
+export default function SignInButton() {
   return (
     <form
       action={async () => {
@@ -12,7 +12,7 @@ export default function LogInButton() {
         type="submit"
         className="m-0 min-w-24 rounded-lg bg-dark px-2 py-1.5 font-mono text-light dark:bg-light dark:text-dark"
       >
-        Login
+        Sign in
       </button>
     </form>
   );
