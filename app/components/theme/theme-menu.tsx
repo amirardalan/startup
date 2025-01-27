@@ -56,7 +56,7 @@ export default function ThemeMenu() {
         </button>
       </Tooltip>
       {menuOpen && (
-        <div className="absolute right-0 z-10 mt-2 w-28 rounded-md bg-white shadow-lg dark:bg-gray-800 dark:text-light">
+        <div className="z-80 absolute right-0 mt-2 w-28 rounded-md bg-white shadow-lg dark:bg-gray-800 dark:text-light">
           {(['light', 'dark', 'system'] as Theme[]).map((t, index, array) => (
             <button
               key={t}
