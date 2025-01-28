@@ -1,4 +1,5 @@
-import type { Metadata } from 'next';
+import { Metadata } from 'next';
+import { headers } from 'next/headers';
 
 import '@/app/globals.css';
 import clsx from 'clsx';
@@ -29,26 +30,40 @@ const mono = JetBrains_Mono({
   display: 'swap',
 });
 
-export const metadata: Metadata = {
-  title: 'Startup()',
-  description: "We'll have to think of something to go here.",
-  icons: {
-    icon: [
-      {
-        rel: 'icon',
-        media: '(prefers-color-scheme: light)',
-        type: 'image/png',
-        url: LightIcon.src,
-      },
-      {
-        rel: 'icon',
-        media: '(prefers-color-scheme: dark)',
-        type: 'image/png',
-        url: DarkIcon.src,
-      },
-    ],
-  },
+type Props = {
+  children: React.ReactNode;
+  params: { slug?: string[] };
+  searchParams: { [key: string]: string | string[] | undefined };
 };
+
+export async function generateMetadata(): Promise<Metadata> {
+  const pathname = (await headers()).get('x-next-pathname') as string;
+  const title =
+    pathname === '/'
+      ? ''
+      : `| ${pathname.slice(1).charAt(0).toUpperCase()}${pathname.slice(2)}`;
+
+  return {
+    title: `Startup() ${title}`,
+    description: "We'll have to think of something to go here.",
+    icons: {
+      icon: [
+        {
+          rel: 'icon',
+          media: '(prefers-color-scheme: light)',
+          type: 'image/png',
+          url: LightIcon.src,
+        },
+        {
+          rel: 'icon',
+          media: '(prefers-color-scheme: dark)',
+          type: 'image/png',
+          url: DarkIcon.src,
+        },
+      ],
+    },
+  };
+}
 
 export default async function RootLayout({
   children,
