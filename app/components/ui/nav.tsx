@@ -8,15 +8,15 @@ export default function Navigation() {
   const pathname = usePathname();
 
   const getNavItemClass = (href: string, isLast?: boolean) => {
-    return clsx('text-dark dark:text-light', {
+    return clsx('text-gray-400', {
       'text-primary dark:text-primary': pathname === href,
       'mr-6': !isLast,
     });
   };
 
   return (
-    <nav className={clsx('flex justify-end dark:bg-dark')}>
-      <div className={clsx('flex flex-row dark:bg-dark')}>
+    <nav className={clsx('flex justify-end')}>
+      <div className={clsx('flex flex-row')}>
         <Link href="/">
           <span className={getNavItemClass('/')}>Home</span>
         </Link>

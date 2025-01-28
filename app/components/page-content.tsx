@@ -20,11 +20,11 @@ export default function PageContent() {
       <div className="text-center font-mono text-3xl capitalize text-gray-400">
         {!pageName || `${pageName} —`} Startup()
       </div>
-      <div className="font-serif text-lg italic text-gray-600">
+      <div className="mt-2 font-serif text-lg italic text-gray-600">
         A Nextjs App Router Starter
       </div>
-      <div className="mt-5 font-sans text-dark dark:text-light">
-        Testing body font.
+      <div className="mt-5 font-sans text-xxs text-dark dark:text-light">
+        By Amir Ardalan
       </div>
     </div>
   );

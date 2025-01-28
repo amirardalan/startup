@@ -2,11 +2,11 @@ import Nav from '@/components/ui/nav';
 
 export default function Footer() {
   return (
-    <footer className="flex flex-row text-left text-sm text-dark dark:text-light">
+    <footer className="flex flex-row text-left text-sm text-gray-400">
       <div className="mr-6 text-gray-400">
-        &copy; {new Date().getFullYear()} Startup{' '}
+        &copy; {new Date().getFullYear()} Startup
       </div>
-      <span className="hidden text-gray-600 lg:block">|</span>{' '}
+      <span className="text-gray-300 dark:text-gray-600">|</span>
       <div className="ml-6">
         <Nav />
       </div>
