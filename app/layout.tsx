@@ -13,8 +13,9 @@ import Footer from '@/components/ui/footer';
 
 import { SessionProvider } from 'next-auth/react';
 
-import { Exo_2, JetBrains_Mono, Playwrite_US_Modern } from 'next/font/google';
-const sans = Exo_2({
+import { Inter, JetBrains_Mono, Playwrite_US_Modern } from 'next/font/google';
+
+const sans = Inter({
   subsets: ['latin'],
   display: 'swap',
 });
@@ -79,10 +80,15 @@ export default async function RootLayout({
         className={(sans.className, serif.className, mono.className)}
       >
         <body
-          className={clsx(theme, 'grid h-screen grid-rows-layout', {
-            'bg-light': theme === 'light',
-            'dark:bg-dark': theme === 'dark',
-          })}
+          className={clsx(
+            'font-sans',
+            theme,
+            'grid h-screen grid-rows-layout',
+            {
+              'bg-light': theme === 'light',
+              'dark:bg-dark': theme === 'dark',
+            }
+          )}
         >
           <div className="flex min-h-screen flex-col p-4 lg:p-8">
             <Header />

@@ -23,6 +23,9 @@ export default function PageContent() {
       <div className="font-serif text-lg italic text-gray-600">
         A Nextjs App Router Starter
       </div>
+      <div className="mt-5 font-sans text-dark dark:text-light">
+        Testing body font.
+      </div>
     </div>
   );
 }

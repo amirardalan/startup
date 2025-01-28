@@ -4,7 +4,7 @@ const config: Config = {
   content: ['./app/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
     fontFamily: {
-      sans: ['Exo 2', 'system-ui'],
+      sans: ['Inter', 'system-ui'],
       serif: ['Playwrite US Modern', 'serif'],
       mono: ['JetBrains Mono', 'monospace'],
     },
