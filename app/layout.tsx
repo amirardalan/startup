@@ -59,7 +59,10 @@ export default async function RootLayout({
 
   return (
     <SessionProvider>
-      <html lang="en">
+      <html
+        lang="en"
+        className={(sans.className, serif.className, mono.className)}
+      >
         <body
           className={clsx(theme, 'grid h-screen grid-rows-layout', {
             'bg-light': theme === 'light',
