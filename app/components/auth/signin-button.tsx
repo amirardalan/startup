@@ -1,4 +1,5 @@
 import { signIn } from '@/auth';
+import Button from '@/components/ui/button';
 
 export default function SignInButton() {
   return (
@@ -8,12 +9,7 @@ export default function SignInButton() {
         await signIn('github');
       }}
     >
-      <button
-        type="submit"
-        className="text-xxs m-0 min-w-24 rounded-lg bg-dark px-2 py-1.5 font-mono uppercase text-light dark:bg-light dark:text-dark"
-      >
-        Sign in
-      </button>
+      <Button type="submit" text="Sign In" />
     </form>
   );
 }
