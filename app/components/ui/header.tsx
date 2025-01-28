@@ -7,7 +7,7 @@ export default async function Header() {
 
   return (
     <div className="flex flex-row items-center justify-between">
-      <div className="text-dark dark:text-light">
+      <div className="font-mono text-xxs uppercase text-dark dark:text-light">
         {session
           ? `Welcome, ${session?.user?.name?.split(' ')[0]}`
           : 'Welcome, Guest'}

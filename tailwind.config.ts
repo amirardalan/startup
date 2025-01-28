@@ -10,7 +10,7 @@ const config: Config = {
     },
     extend: {
       fontSize: {
-        xxs: '.75rem',
+        xxs: '.7rem',
       },
       colors: {
         light: 'var(--color-light)',
