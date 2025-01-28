@@ -11,6 +11,7 @@ This is a [Next.js](https://nextjs.org/) App Router project with TypeScript, Tai
 - [CLSX](https://github.com/lukeed/clsx) for improved logic within `className`
 - Next.js [optimized fonts](https://nextjs.org/learn/dashboard-app/optimizing-fonts-images)
 - Dynamic theme-based favicon
+- Dynamic Metadata and Page Titles
 - Route-based active navigation highlighting
 - Dynamic footer copyright date
 - Tooltip component
