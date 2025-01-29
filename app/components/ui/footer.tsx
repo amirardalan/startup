@@ -4,12 +4,13 @@ export default function Footer() {
   return (
     <footer className="flex flex-row text-left text-sm text-gray-400">
       <div className="mr-6 text-gray-400">
-        &copy; {new Date().getFullYear()} <em>Startup</em> •{' '}
+        &copy; {new Date().getFullYear()}
         <a
           href="https://github.com/amirardalan"
           target="blank"
           rel="noopener noreferrer"
           title="@amirardalan • GitHub"
+          className="ml-2"
         >
           Amir Ardalan
         </a>
