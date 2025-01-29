@@ -28,6 +28,9 @@
     color: var(--color-primary);
     background-color: var(--color-secondary);
   }
+  a {
+    color: var(--color-primary);
+  }
 }
 
 @layer components {
