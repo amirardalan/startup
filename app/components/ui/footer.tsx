@@ -10,7 +10,7 @@ export default function Footer() {
           target="blank"
           rel="noopener noreferrer"
           title="@amirardalan • GitHub"
-          className="ml-2"
+          className="ml-2 hover:underline"
         >
           Amir Ardalan
         </a>
