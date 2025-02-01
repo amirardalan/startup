@@ -70,18 +70,13 @@ export default async function RootLayout({
     <SessionProvider>
       <html
         lang="en"
-        className={(sans.className, serif.className, mono.className)}
+        className={clsx(sans.className, serif.className, mono.className, theme)}
       >
         <body
-          className={clsx(
-            'font-sans',
-            theme,
-            'grid h-screen grid-rows-layout',
-            {
-              'bg-light': theme === 'light',
-              'dark:bg-dark': theme === 'dark',
-            }
-          )}
+          className={clsx('font-sans', 'grid h-screen grid-rows-layout', {
+            'bg-light': theme === 'light',
+            'dark:bg-dark': theme === 'dark',
+          })}
         >
           <div className="flex min-h-screen flex-col p-4 lg:p-8">
             <Header />

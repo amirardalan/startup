@@ -24,6 +24,12 @@
   html {
     font-family: var(--font-sans);
   }
+  body {
+    background-color: var(--color-light);
+    .dark & {
+      background-color: var(--color-dark);
+    }
+  }
   ::selection {
     color: var(--color-primary);
     background-color: var(--color-secondary);
