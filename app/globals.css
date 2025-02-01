@@ -9,8 +9,8 @@
 
   --color-dark: rgb(0, 0, 0);
   --color-light: rgb(255, 255, 255);
-  --color-primary: rgb(0, 136, 255);
-  --color-secondary: rgb(162, 156, 174);
+  --color-primary: rgb(0, 195, 162);
+  --color-secondary: rgb(214, 210, 221);
 }
 
 @media (prefers-color-scheme: dark) {
