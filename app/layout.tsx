@@ -1,17 +1,16 @@
 import { Metadata } from 'next';
 import { headers } from 'next/headers';
+import { SessionProvider } from 'next-auth/react';
 
-import '@/app/globals.css';
-import clsx from 'clsx';
 import { getTheme } from '@/app/utils/get-theme';
+import clsx from 'clsx';
+import '@/app/globals.css';
 
 import DarkIcon from '@/public/images/favicon-dark.png';
 import LightIcon from '@/public/images/favicon-light.png';
 
 import Header from '@/components/ui/header';
 import Footer from '@/components/ui/footer';
-
-import { SessionProvider } from 'next-auth/react';
 
 import { Inter, JetBrains_Mono, Playwrite_US_Modern } from 'next/font/google';
 
@@ -30,12 +29,6 @@ const mono = JetBrains_Mono({
   style: ['normal', 'italic'],
   display: 'swap',
 });
-
-type Props = {
-  children: React.ReactNode;
-  params: { slug?: string[] };
-  searchParams: { [key: string]: string | string[] | undefined };
-};
 
 export async function generateMetadata(): Promise<Metadata> {
   const pathname = (await headers()).get('x-next-pathname') as string;
