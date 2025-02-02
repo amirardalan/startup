@@ -8,7 +8,7 @@ export default async function Account() {
     <>
       {session ? (
         <div>
-          <h1 className="mb-3 mt-4 border-b-2 border-solid border-dark pb-1 text-xl text-dark dark:border-light dark:text-light">
+          <h1 className="mb-3 mt-4 border-b-2 border-solid border-dark pb-2 text-xl text-dark dark:border-light dark:text-light">
             Account
           </h1>
           <h2 className="text-dark dark:text-light">
