@@ -8,11 +8,11 @@ export default async function Account() {
     <>
       {session ? (
         <div>
-          <h1 className="mb-3 mt-4 border-b-2 border-solid border-gray-300 pb-2 text-xl text-dark dark:border-gray-600 dark:text-light">
+          <h1 className="text-xxl mb-6 mt-4 border-b-2 border-solid border-gray-300 pb-2 text-dark dark:border-gray-600 dark:text-light">
             Account
           </h1>
           <h2 className="text-dark dark:text-light">
-            {session?.user?.name}'s Account
+            → {session?.user?.name}'s Dashboard
           </h2>
         </div>
       ) : (

@@ -11,12 +11,15 @@ const config: Config = {
     extend: {
       fontSize: {
         xxs: '.7rem',
+        xxl: '1.7rem',
       },
       colors: {
         light: 'var(--color-light)',
         dark: 'var(--color-dark)',
         primary: 'var(--color-primary)',
         secondary: 'var(--color-secondary)',
+        accent: 'var(--color-accent)',
+        accentLight: 'var(--color-accent-light)',
       },
       gridTemplateRows: {
         layout: 'auto 1fr auto',
