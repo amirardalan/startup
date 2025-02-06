@@ -9,7 +9,7 @@ export default async function Header() {
 
   return (
     <div className="flex flex-row items-center justify-between">
-      <div className="font-mono text-xxs uppercase text-dark dark:text-light">
+      <div className="min-w-40 font-mono text-xxs uppercase text-dark dark:text-light">
         {session ? (
           <>
             Welcome,&nbsp;
@@ -20,7 +20,7 @@ export default async function Header() {
         )}
       </div>
       <Logo />
-      <div className="flex">
+      <div className="flex min-w-40 justify-end">
         <div className="mr-6 mt-1 flex items-center align-middle">
           <ThemeMenu />
         </div>
