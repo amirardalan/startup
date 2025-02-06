@@ -7,13 +7,11 @@ export default async function Account() {
   return (
     <>
       {session ? (
-        <div>
-          <h1 className="text-xxl mb-6 mt-4 border-b-2 border-solid border-gray-300 pb-2 text-dark dark:border-gray-600 dark:text-light">
-            Account
-          </h1>
-          <h2 className="text-dark dark:text-light">
-            → {session?.user?.name}'s Dashboard
+        <div className="mt-8">
+          <h2 className="mb-10 border-b-2 border-solid border-gray-300 pb-4 text-xxl text-dark dark:border-gray-600 dark:text-light">
+            Account &mdash; {session?.user?.name}
           </h2>
+          <p className="text-dark dark:text-light">Account content</p>
         </div>
       ) : (
         <div className="flex h-screen flex-row items-center justify-center text-dark dark:text-light">

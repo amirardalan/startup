@@ -1,6 +1,7 @@
 import { auth } from '@/auth';
 import ThemeMenu from '@/components/theme/theme-menu';
-import AuthMenu from '@/app/components/auth/menu';
+import AuthMenu from '@/components/auth/menu';
+import Logo from '@/components/ui/logo';
 import Link from 'next/link';
 
 export default async function Header() {
@@ -18,6 +19,7 @@ export default async function Header() {
           'Welcome, Guest'
         )}
       </div>
+      <Logo />
       <div className="flex">
         <div className="mr-6 mt-1 flex items-center align-middle">
           <ThemeMenu />
