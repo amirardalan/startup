@@ -14,7 +14,7 @@ export default function PageContent() {
           priority
         />
       </div>
-      <div className="mt-2 font-serif text-lg italic text-gray-600">
+      <div className="mt-2 font-mono text-lg text-gray-600">
         A Nextjs App Router Starter
       </div>
       <div className="mt-5 font-sans text-xxs text-dark dark:text-light">
