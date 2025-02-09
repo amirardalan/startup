@@ -1,5 +1,4 @@
-import { FC, useState, useEffect, useRef, ReactNode } from 'react';
-import { useMediaQuery } from '@/app/hooks/mediaquery';
+import { useState, useEffect, useRef, ReactNode } from 'react';
 
 type TooltipProps = {
   pos?: 't' | 'r' | 'b' | 'l' | 'cursor';
@@ -7,10 +6,9 @@ type TooltipProps = {
   children: ReactNode;
 };
 
-const Tooltip: FC<TooltipProps> = ({ pos, text, children }) => {
+export default function Tooltip({ pos, text, children }: TooltipProps) {
   const [isHovered, setIsHovered] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const isTablet = useMediaQuery(1024);
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -42,30 +40,30 @@ const Tooltip: FC<TooltipProps> = ({ pos, text, children }) => {
       onMouseLeave={() => setIsHovered(false)}
     >
       {children}
-      {isHovered && (
-        <div
-          className={`absolute z-30 rounded bg-gray-800 px-2 py-1 font-mono text-xxs uppercase text-white shadow-md ${
-            pos === 't'
-              ? '-top-8 left-1/2 -translate-x-1/2'
-              : pos === 'r'
-                ? 'left-full top-1/2 ml-2 -translate-y-1/2'
-                : pos === 'b'
-                  ? 'left-1/2 top-full mt-1 -translate-x-1/2'
-                  : pos === 'l'
-                    ? 'right-full top-1/2 mr-2 -translate-y-1/2'
-                    : ''
-          }`}
-          style={
-            pos === 'cursor'
-              ? { top: mousePosition.y, left: mousePosition.x }
-              : {}
-          }
-        >
-          {text}
-        </div>
-      )}
+      <div
+        className={`absolute z-30 rounded bg-gray-800 px-2 py-1 font-mono text-xxs uppercase text-white shadow-md transition-opacity duration-300 ${
+          isHovered
+            ? 'pointer-events-auto opacity-100'
+            : 'pointer-events-none opacity-0'
+        } ${
+          pos === 't'
+            ? '-top-8 left-1/2 -translate-x-1/2'
+            : pos === 'r'
+              ? 'left-full top-1/2 ml-2 -translate-y-1/2'
+              : pos === 'b'
+                ? 'left-1/2 top-full mt-1 -translate-x-1/2'
+                : pos === 'l'
+                  ? 'right-full top-1/2 mr-2 -translate-y-1/2'
+                  : ''
+        }`}
+        style={
+          pos === 'cursor'
+            ? { top: mousePosition.y, left: mousePosition.x }
+            : {}
+        }
+      >
+        {text}
+      </div>
     </div>
   );
-};
-
-export default Tooltip;
+}
