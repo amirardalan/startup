@@ -1,5 +1,3 @@
-import PageContent from '@/app/components/page-content';
-
 export default function About() {
   return (
     <main>
