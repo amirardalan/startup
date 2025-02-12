@@ -10,7 +10,9 @@ export default async function Account() {
           <h2 className="mb-6 border-b-2 border-solid border-gray-300 pb-4 text-xxl text-dark dark:border-gray-600 dark:text-light">
             Account
           </h2>
-          <h3 className="text-dark dark:text-light">{session?.user?.name}</h3>
+          <h3 className="text-dark dark:text-light">
+            {session?.user?.name}'s Profile
+          </h3>
         </div>
       ) : (
         <div className="flex h-screen flex-row items-center justify-center text-dark dark:text-light">
