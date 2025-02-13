@@ -17,8 +17,15 @@ export default function PageContent() {
       <div className="mt-2 font-mono text-lg text-gray-600">
         A Nextjs App Router Starter
       </div>
-      <div className="mt-5 font-sans text-xxs text-dark dark:text-light">
-        By Amir Ardalan
+      <div className="text-s mt-5 font-sans text-gray-600">
+        By{' '}
+        <a
+          href="https://github.com/amirardalan"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          @amirardalan
+        </a>
       </div>
     </div>
   );

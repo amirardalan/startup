@@ -10,7 +10,8 @@ const config: Config = {
     },
     extend: {
       fontSize: {
-        xxs: '.7rem',
+        xs: '.85rem',
+        xxs: '.675rem',
         xxl: '1.7rem',
       },
       colors: {
