@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="mr-6 text-gray-400">
         &copy; {new Date().getFullYear()} Startup()
       </div>
-      <span className="text-gray-300 dark:text-gray-600">➫</span>
+      <span className="text-gray-300 dark:text-gray-600">•</span>
       <div className="ml-6">
         <Nav />
       </div>
