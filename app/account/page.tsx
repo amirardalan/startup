@@ -15,7 +15,7 @@ export default async function Account() {
           </h3>
         </div>
       ) : (
-        <div className="flex h-screen flex-row items-center justify-center text-dark dark:text-light">
+        <div className="flex h-[80vh] flex-row items-center justify-center text-dark dark:text-light">
           <span>
             <button
               className="cursor-pointer text-dark underline dark:text-light"
