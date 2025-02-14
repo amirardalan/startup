@@ -11,7 +11,7 @@ export default async function Account() {
             Account
           </h2>
           <h3 className="text-xs text-dark dark:text-light">
-            {session?.user?.name}'s Profile
+            {session?.user?.name}&apos;s Profile
           </h3>
         </div>
       ) : (
