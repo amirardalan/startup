@@ -1,4 +1,5 @@
 import { auth, signIn } from '@/auth';
+import Image from 'next/image';
 
 export default async function Account() {
   const session = await auth();
@@ -13,6 +14,15 @@ export default async function Account() {
           <h3 className="text-s text-dark dark:text-light">
             {session?.user?.name}&apos;s Profile
           </h3>
+          <div className="mt-4">
+            <Image
+              src={session?.user?.image ?? '/default-avatar.png'}
+              alt="Profile"
+              width={128}
+              height={128}
+              className="rounded-full"
+            />
+          </div>
         </div>
       ) : (
         <div className="flex h-[80vh] flex-row items-center justify-center text-dark dark:text-light">
