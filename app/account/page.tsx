@@ -1,5 +1,5 @@
 import { auth, signIn } from '@/auth';
-import Image from 'next/image';
+import Avatar from '@/components/account/avatar';
 
 export default async function Account() {
   const session = await auth();
@@ -11,17 +11,13 @@ export default async function Account() {
           <h2 className="mb-6 border-b-2 border-solid border-gray-300 pb-4 text-xxl text-dark dark:border-gray-600 dark:text-light">
             Account
           </h2>
-          <h3 className="text-s text-dark dark:text-light">
-            {session?.user?.name}&apos;s Profile
-          </h3>
-          <div className="mt-4">
-            <Image
-              src={session?.user?.image ?? '/default-avatar.png'}
-              alt="Profile"
-              width={128}
-              height={128}
-              className="rounded-full"
-            />
+          <div className="flex flex-row items-center">
+            <div className="h-6 w-6">
+              <Avatar />
+            </div>
+            <h3 className="text-s ml-2 text-dark dark:text-light">
+              {session?.user?.name}
+            </h3>
           </div>
         </div>
       ) : (

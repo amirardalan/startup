@@ -1,6 +1,6 @@
 import { auth } from '@/auth';
 import ThemeMenu from '@/components/theme/theme-menu';
-import AuthMenu from '@/components/auth/menu';
+import AuthMenu from '@/components/account/menu';
 import Logo from '@/components/ui/logo';
 import Link from 'next/link';
 
