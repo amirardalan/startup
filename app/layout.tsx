@@ -35,10 +35,10 @@ export async function generateMetadata(): Promise<Metadata> {
   const title =
     pathname === '/'
       ? ''
-      : `| ${pathname.slice(1).charAt(0).toUpperCase()}${pathname.slice(2)}`;
+      : `• ${pathname.slice(1).charAt(0).toUpperCase()}${pathname.slice(2)}`;
 
   return {
-    title: `Startup() ${title}`,
+    title: `Startup ${title}`,
     description: "We'll have to think of something to go here.",
     icons: {
       icon: [

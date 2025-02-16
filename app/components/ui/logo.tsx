@@ -12,10 +12,10 @@ export default function Logo({ fontSize }: LogoProps) {
         <h1
           className={clsx(
             fontSize ?? 'text-xxl',
-            'font-serif text-dark dark:text-light'
+            'font-serif italic text-dark dark:text-light'
           )}
         >
-          Startup()
+          Startup
         </h1>
       </Link>
     </div>
