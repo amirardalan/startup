@@ -1,10 +1,20 @@
 import Link from 'next/link';
+import clsx from 'clsx';
 
-export default function Logo() {
+type LogoProps = {
+  fontSize?: string;
+};
+
+export default function Logo({ fontSize }: LogoProps) {
   return (
     <div className="flex items-center">
       <Link href="/">
-        <h1 className="font-serif text-xxl text-dark dark:text-light">
+        <h1
+          className={clsx(
+            fontSize ?? 'text-xxl',
+            'font-serif text-dark dark:text-light'
+          )}
+        >
           Startup()
         </h1>
       </Link>
