@@ -1,3 +1,6 @@
+'use client';
+import Tooltip from '../components/util/tooltip';
+
 export default function About() {
   return (
     <main>
@@ -9,16 +12,19 @@ export default function About() {
           A Next.js App Router starter project with TypeScript, Tailwind,
           NextAuth, Prettier, and Dark Mode.
         </p>
-        <p className="mt-2 text-dark dark:text-light">
-          Built and maintained by{' '}
-          <a
-            href="https://x.com/amirardalan"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            @amirardalan
-          </a>
-        </p>
+        <span className="mt-2 flex flex-row">
+          <p className="text-dark dark:text-light">Built and maintained by</p>
+          <Tooltip text="@amirardalan on X" pos="b">
+            <a
+              href="https://x.com/amirardalan"
+              rel="noopener noreferrer"
+              target="_blank"
+              className="ml-1"
+            >
+              @amirardalan
+            </a>
+          </Tooltip>
+        </span>
       </div>
     </main>
   );
