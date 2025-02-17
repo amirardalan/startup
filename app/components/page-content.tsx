@@ -1,5 +1,6 @@
 'use client';
 import Image from 'next/image';
+import Tooltip from '@/components/util/tooltip';
 
 export default function PageContent() {
   return (
@@ -18,14 +19,17 @@ export default function PageContent() {
         A Nextjs App Router Starter
       </div>
       <div className="text-s mt-5 font-sans text-gray-600 dark:text-gray-500">
-        By{' '}
-        <a
-          href="https://github.com/amirardalan"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          @amirardalan
-        </a>
+        By
+        <Tooltip text="GitHub" pos="b">
+          <a
+            href="https://github.com/amirardalan"
+            rel="noopener noreferrer"
+            target="_blank"
+            className="ml-1"
+          >
+            @amirardalan
+          </a>
+        </Tooltip>
       </div>
     </div>
   );

@@ -14,7 +14,7 @@ export default function About() {
         </p>
         <span className="mt-2 flex flex-row">
           <p className="text-dark dark:text-light">Built and maintained by</p>
-          <Tooltip text="@amirardalan on X" pos="b">
+          <Tooltip text="x.com" pos="b">
             <a
               href="https://x.com/amirardalan"
               rel="noopener noreferrer"
@@ -24,6 +24,7 @@ export default function About() {
               @amirardalan
             </a>
           </Tooltip>
+          <p className="text-dark dark:text-light">.</p>
         </span>
       </div>
     </main>
