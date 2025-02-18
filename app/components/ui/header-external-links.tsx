@@ -9,8 +9,6 @@ export default function HeaderExternalLinks() {
   const fill =
     effectiveTheme === 'dark' ? 'var(--color-light)' : 'var(--color-dark)';
 
-  console.log(fill);
-
   const handleClick = () => {
     window.open(
       'https://github.com/amirardalan/startup',
