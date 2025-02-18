@@ -21,6 +21,15 @@ export default async function Header() {
       </div>
       <Logo />
       <div className="flex min-w-40 justify-end">
+        <div>
+          <a
+            href="https://github.com/amirardalan/startup"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Star on GitHub
+          </a>
+        </div>
         <div className="mr-6 mt-1 flex items-center align-middle">
           <ThemeMenu />
         </div>
