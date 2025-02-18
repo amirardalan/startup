@@ -3,6 +3,7 @@ import ThemeMenu from '@/components/theme/theme-menu';
 import AuthMenu from '@/components/account/menu';
 import Logo from '@/components/ui/logo';
 import Link from 'next/link';
+import HeaderExternalLinks from '@/components/ui/header-external-links';
 
 export default async function Header() {
   const session = await auth();
@@ -21,6 +22,7 @@ export default async function Header() {
       </div>
       <Logo />
       <div className="flex min-w-40 justify-end">
+        <HeaderExternalLinks />
         <div className="mr-6 mt-1 flex items-center align-middle">
           <ThemeMenu />
         </div>
