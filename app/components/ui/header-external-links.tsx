@@ -5,8 +5,9 @@ import Tooltip from '@/components/util/tooltip';
 import { useTheme } from '@/app/store/theme';
 
 export default function HeaderExternalLinks() {
-  const { theme } = useTheme();
-  const fill = theme === 'dark' ? 'var(--color-light)' : 'var(--color-dark)';
+  const { effectiveTheme } = useTheme();
+  const fill =
+    effectiveTheme === 'dark' ? 'var(--color-light)' : 'var(--color-dark)';
 
   console.log(fill);
 
