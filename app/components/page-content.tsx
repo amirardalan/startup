@@ -12,7 +12,7 @@ export default function PageContent() {
           width={128}
           height={128}
           className="flex justify-center"
-          priority
+          priority={true}
         />
       </div>
       <div className="mt-2 font-mono text-lg text-gray-600 dark:text-gray-500">

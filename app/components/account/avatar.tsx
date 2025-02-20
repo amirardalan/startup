@@ -10,6 +10,7 @@ export default async function Avatar() {
       width={128}
       height={128}
       className="rounded-full"
+      priority={true}
     />
   );
 }
