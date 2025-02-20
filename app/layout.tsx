@@ -39,7 +39,8 @@ export async function generateMetadata(): Promise<Metadata> {
 
   return {
     title: `Startup ${title}`,
-    description: "We'll have to think of something to go here.",
+    description:
+      'A Next.js App Router starter project with TypeScript, Tailwind, NextAuth, Prettier, and Dark Mode.',
     icons: {
       icon: [
         {
