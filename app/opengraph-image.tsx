@@ -23,8 +23,7 @@ export default async function Image() {
       // ImageResponse JSX element
       <div
         style={{
-          fontSize: 128,
-          background: 'white',
+          background: 'black',
           width: '100%',
           height: '100%',
           display: 'flex',
@@ -32,7 +31,21 @@ export default async function Image() {
           justifyContent: 'center',
         }}
       >
-        Startup
+        <div tw="flex p-8">
+          <div tw="flex flex-col md:flex-row w-full md:items-center justify-between p-8">
+            <h2 tw="flex flex-col text-[124px] text-white text-left">
+              <span>Startup()</span>
+            </h2>
+            <div tw="w-132 ml-6 flex">
+              <h3 tw="text-4xl text-gray-400 leading-10">
+                <span>
+                  A Next.js App Router starter project with TypeScript,
+                  Tailwind, NextAuth, Prettier, and Dark Mode.
+                </span>
+              </h3>
+            </div>
+          </div>
+        </div>
       </div>
     ),
     // ImageResponse options
