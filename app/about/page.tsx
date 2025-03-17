@@ -10,7 +10,7 @@ export default function About() {
         </h2>
         <p className="text-dark dark:text-light">
           A Next.js App Router starter project with TypeScript, Tailwind,
-          NextAuth, Prettier, and Dark Mode.
+          NextAuth, Zustand, OG meta tags, and Dark Mode.
         </p>
         <span className="mt-2 flex flex-row">
           <p className="text-dark dark:text-light">Built and maintained by</p>
