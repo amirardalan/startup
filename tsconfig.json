@@ -19,14 +19,14 @@
     ],
     "paths": {
       "@/*": ["./*"],
-      "@/app": ["./app/*"],
-      "@/api/*": ["./app/api/*"],
-      "@/components/*": ["./app/components/*"],
-      "@/hooks/*": ["./app/hooks/*"],
-      "@/lib/*": ["./app/lib/*"],
-      "@/utils/*": ["./app/utils/*"],
-      "@/store/*": ["./app/store/*"],
-      "@/types/*": ["./app/types/*"]
+      "@/app": ["./src/app/*"],
+      "@/api/*": ["./src/app/api/*"],
+      "@/components/*": ["./src/components/*"],
+      "@/hooks/*": ["./src/hooks/*"],
+      "@/lib/*": ["./src/lib/*"],
+      "@/utils/*": ["./src/utils/*"],
+      "@/store/*": ["./src/store/*"],
+      "@/types/*": ["./src/types/*"]
     },
     "target": "ES2017"
   },
