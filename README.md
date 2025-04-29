@@ -30,9 +30,12 @@ Then, set up your [GitHub oAuth App](https://authjs.dev/getting-started/provider
 
 ```
 // .env.local
+NEXT_PUBLIC_APP_URL="http://localhost:3000"
+
 AUTH_GITHUB_ID=<GitHub Client ID>
 AUTH_GITHUB_SECRET=<GitHub Client Secret>
 
+AUTH_TRUST_HOST=NEXT_PUBLIC_APP_URL
 NEXTAUTH_URL=http://localhost:3000
 NEXTAUTH_SECRET=<Next Auth Secret>
 ```
