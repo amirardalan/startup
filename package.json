@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "@types/js-cookie": "^3.0.6",
-    "@types/node": "^20.17.48",
+    "@types/node": "^20.17.50",
     "@types/react": "19.0.7",
     "@types/react-dom": "19.0.3",
     "eslint": "^8.57.1",
