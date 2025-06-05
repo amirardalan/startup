@@ -23,7 +23,7 @@ This is a [Next.js](https://nextjs.org/) App Router project with TypeScript, Tai
 ### Setup
 
 ```bash
-bun install
+npm install
 ```
 
 Then, set up your [GitHub oAuth App](https://authjs.dev/getting-started/providers/github?framework=next-js) and add your GitHub Client ID and Secret in a `.env.local` file:
@@ -49,5 +49,5 @@ npx auth secret
 ### Run
 
 ```bash
-bun dev
+npm run dev
 ```
