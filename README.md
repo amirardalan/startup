@@ -1,6 +1,6 @@
 # Startup
 
-This is a [Next.js](https://nextjs.org/) App Router project with TypeScript, Tailwind, CLSX, and Prettier.
+This is a [Next.js](https://nextjs.org/) App Router project with various features and utilities to quickly bootstrap a web app.
 
 ### Features
 
