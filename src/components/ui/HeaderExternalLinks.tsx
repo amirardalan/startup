@@ -11,7 +11,7 @@ export default function HeaderExternalLinks() {
 
   const handleClick = () => {
     window.open(
-      'https://github.com/amirardalan/amirardalan.com',
+      'https://github.com/amirardalan/startup',
       '_blank',
       'noopener,noreferrer'
     );
